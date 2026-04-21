@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quiz · Odnowa — autotest wellness</title>
+<meta name="description" content="Krótki autotest wellness — 7 pytań o Twoje codzienne samopoczucie." />
+<link rel="stylesheet" href="styles/global.css" />
+<style>
+:root {
+  /* Mapowanie lokalnych zmiennych na globalne tokeny.
+     Zmień wartości w styles/global.css — tu nie trzeba nic ruszać. */
+  --bg:           var(--color-bg-muted);
+  --bg-elev:      var(--color-bg-elevated);
+  --ink:          var(--color-text);
+  --ink-soft:     var(--color-text-secondary);
+  --ink-mute:     var(--color-text-muted);
+  --line:         rgba(32, 33, 34, 0.5);
+  --line-strong:  var(--color-border-strong);
+  --accent:       var(--color-primary);
+  --accent-ink:   var(--color-primary-dark);
+  --accent-soft:  var(--color-primary-soft);
+  --focus:        var(--color-primary-dark);
+  --shadow:       var(--shadow-sm);
+  --shadow-lift:  var(--shadow-md);
+  --radius:       var(--radius);
+  --radius-sm:    var(--radius-sm);
+  --base:         24px;
+  --serif:        var(--font-primary);
+  --sans:         var(--font-primary);
+  --mono:         var(--font-mono);
+}
+
+.theme-earth {
+  --accent: #8A3F1A;
+  --accent-ink: #5B2810;
+  --accent-soft: #F1DBC7;
+  --bg-elev: #F9EFE3;
+}
+
+.theme-mineral {
+  --accent: #2E4756;
+  --accent-ink: #1A2D38;
+  --accent-soft: #D3DDE3;
+  --bg-elev: #F1F1ED;
+  --line: #D2D2CC;
+}
+
+/* reset pochodzi z styles/global.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--base);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: var(--ink);
+}
+h1 { font-size: clamp(32px, 5vw + 1vh, 72px); line-height: 1.02; font-weight: 700; }
+h2 { font-size: clamp(22px, 2.8vh + .4vw, 42px); line-height: 1.08; font-weight: 700; }
+h3 { font-size: clamp(20px, 2vw, 30px); line-height: 1.2; }
+
+p { margin: 0; }
+strong, b { font-weight: 700; }
+button { font-family: var(--sans); cursor: pointer; border: none; background: none; color: inherit; font-size: inherit; }
+
+.mono {
+  font-family: var(--mono);
+  font-size: 0.65em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--ink);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  z-index: 200;
+  transition: top .2s;
+  text-decoration: none;
+}
+.skip-link:focus { top: 16px; outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* App — fullscreen grid */
+.app {
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* Brand bar */
+.brandbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(10px, 1.4vh, 16px) clamp(20px, 4vw, 48px);
+  border-bottom: 1px solid var(--line);
+  background: #FFFFFF;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.brandbar .logo {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.2vw, 28px);
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144;
+}
+.brandbar .logo span { color: var(--accent); }
+.brandbar .nav-mini {
+  font-size: clamp(14px, 1.4vw, 18px);
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .brandbar .nav-mini { display: none; }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: clamp(10px, 1.4vh, 16px) clamp(20px, 2.4vw, 34px);
+  min-height: clamp(44px, 5.5vh, 56px);
+  font-size: clamp(15px, 1.6vh, 18px);
+  font-weight: 700;
+  border-radius: 999px;
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+  letter-spacing: 0.01em;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #FFFFFF;
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-ink);
+  border-color: var(--accent-ink);
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.btn-ghost:hover:not(:disabled) { background: var(--ink); color: #fff; }
+.btn:focus-visible { outline: 4px solid var(--focus); outline-offset: 3px; }
+.btn:disabled { cursor: not-allowed; }
+.btn-arrow { width: 22px; height: 22px; flex-shrink: 0; }
+
+/* Placeholder art */
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(135deg, rgba(15,13,10,.06) 0 1px, transparent 1px 14px),
+    var(--accent-soft);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.placeholder::after {
+  content: attr(data-label);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 700;
+  background: rgba(255,255,255,.85);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+/* ========================
+   LANDING
+   ======================== */
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  padding: clamp(16px, 3vh, 40px) clamp(20px, 4vw, 60px);
+}
+.landing-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(16px, 2.4vh, 28px);
+  max-width: 760px;
+  width: 100%;
+}
+.landing-copy .eyebrow {
+  font-family: var(--mono);
+  font-size: clamp(11px, 1.1vh, 14px);
+  letter-spacing: 0.22em;
+  color: var(--accent-ink);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.landing-copy .lead {
+  font-size: clamp(16px, 1.8vh, 22px);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 600px;
+  font-weight: 500;
+}
+.landing-cta { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; justify-content: center; }
+.meta {
+  display: flex;
+  gap: clamp(16px, 3vw, 32px);
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: clamp(14px, 1.5vh, 18px);
+  color: var(--ink-soft);
+  padding-top: clamp(12px, 1.6vh, 20px);
+  border-top: 1px solid var(--line);
+  font-weight: 600;
+  width: 100%;
+  max-width: 520px;
+}
+.meta div { display: flex; align-items: center; gap: 8px; }
+.meta .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+/* ========================
+   PROGRESS
+   ======================== */
+.progress-wrap {
+  padding: clamp(8px, 1.2vh, 14px) clamp(16px, 3vw, 40px) 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background: var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width .5s cubic-bezier(.2,.8,.2,1);
+}
+.progress-label {
+  font-size: clamp(14px, 1.5vh, 18px);
+  color: var(--ink);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.progress-label b { color: var(--ink); font-weight: 700; }
+
+/* ========================
+   QUESTION
+   ======================== */
+.question-view {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.question {
+  height: 100%;
+  padding: clamp(8px, 1.2vh, 16px) clamp(16px, 3vw, 40px) clamp(8px, 1.4vh, 16px);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: clamp(6px, 1vh, 14px);
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.question-head {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, .7vh, 10px);
+  align-items: center;
+  text-align: center;
+}
+.question-head .eyebrow {
+  font-family: var(--mono);
+  font-size: clamp(10px, 1.1vh, 13px);
+  letter-spacing: 0.22em;
+  color: var(--accent-ink);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.question-head .sub {
+  font-size: clamp(13px, 1.5vh, 17px);
+  color: var(--ink-soft);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Tiles grid */
+.tiles {
+  display: grid;
+  gap: clamp(8px, 1.2vh, 16px);
+  min-height: 0;
+  height: 100%;
+}
+.tiles.grid-2x2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+.tiles.grid-1x4 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+}
+
+@media (max-width: 900px) {
+  .tiles.grid-1x4 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .tiles.grid-2x2, .tiles.grid-1x4 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Tile — horizontal layout */
+.tile {
+  background: var(--bg-elev);
+  border: 2.5px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 36% minmax(0, 1fr);
+  cursor: pointer;
+  transition: border-color .2s, transform .15s, box-shadow .2s, background .2s;
+  min-height: 0;
+  min-width: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: var(--ink);
+  text-align: left;
+}
+.tiles.grid-1x4 .tile {
+  grid-template-columns: 1fr;
+  grid-template-rows: 52% minmax(0, 1fr);
+}
+.tile:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+.tile:focus-visible {
+  outline: 4px solid var(--focus);
+  outline-offset: 3px;
+  border-color: var(--accent);
+}
+.tile.selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+.tile-image {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+}
+.tile-body {
+  padding: clamp(8px, 1.2vh, 18px) clamp(10px, 1.4vw, 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+.tile-index {
+  font-family: var(--mono);
+  font-size: clamp(9px, 1vh, 12px);
+  letter-spacing: 0.2em;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+.tile-label {
+  font-size: clamp(13px, 1.6vh, 19px);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.tile.selected .tile-label { color: var(--accent-ink); font-weight: 700; }
+.tile-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid var(--line-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+  flex-shrink: 0;
+}
+.tile.selected .tile-check { background: var(--accent); border-color: var(--accent); }
+.tile-check svg { width: 20px; height: 20px; opacity: 0; transition: opacity .2s; }
+.tile.selected .tile-check svg { opacity: 1; }
+
+/* Navigation */
+.q-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: clamp(8px, 1.2vh, 14px);
+  border-top: 1px solid var(--line);
+}
+
+/* ========================
+   RESULT
+   ======================== */
+.result {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: clamp(14px, 2vh, 28px);
+  padding: clamp(20px, 3vh, 48px) clamp(20px, 4vw, 60px);
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+.result-score { position: relative; width: clamp(160px, 20vh, 240px); height: clamp(160px, 20vh, 240px); flex-shrink: 0; }
+.result-score svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.result-score .track { fill: none; stroke: var(--line); stroke-width: 14; }
+.result-score .fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.2s cubic-bezier(.2,.8,.2,1);
+}
+.result-score .num {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--serif);
+}
+.result-score .num b {
+  font-size: clamp(44px, 7vh, 68px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144;
+}
+.result-score .num span {
+  font-size: 12px;
+  color: var(--ink);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: var(--mono);
+  margin-top: 8px;
+  font-weight: 700;
+}
+.result h2 { max-width: 720px; text-wrap: balance; }
+.result .summary {
+  font-size: clamp(15px, 1.7vh, 20px);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 660px;
+  font-weight: 500;
+}
+.result-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 720px;
+}
+.r-card {
+  background: var(--bg-elev);
+  border: 2px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  padding: clamp(16px, 2vh, 22px) 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+.r-card .mono { color: var(--accent-ink); }
+.r-card b { font-size: clamp(18px, 1.8vh, 22px); font-family: var(--serif); font-weight: 700; color: var(--ink); }
+.r-card p { font-size: clamp(13px, 1.4vh, 16px); color: var(--ink-soft); line-height: 1.45; font-weight: 500; }
+.result-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.disclaimer { color: var(--ink-soft); font-size: 12px !important; font-weight: 600; }
+
+/* ========================
+   TWEAKS PANEL
+   ======================== */
+.tweaks-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow-lift);
+  z-index: 100;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--ink);
+}
+.tweaks-panel h4 {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 700;
+}
+.tweaks-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+.tweaks-group { display: flex; gap: 6px; }
+.tweaks-group button {
+  flex: 1;
+  padding: 9px 7px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 12px;
+  color: var(--ink);
+  font-weight: 600;
+  transition: all .15s;
+  cursor: pointer;
+}
+.tweaks-group button:hover { border-color: var(--ink); }
+.tweaks-group button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+.tweaks-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lift);
+  z-index: 99;
+  font-size: 18px;
+}
+
+/* Animations */
+.view { animation: fadeSlide .35s cubic-bezier(.2,.8,.2,1); }
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .view, .progress-fill, .result-score .fill, .btn, .tile { animation: none !important; transition: none !important; }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+</style>
+</head>
+<body class="theme-sage">
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<script>
+// Quiz data — 7 pytań, każda odpowiedź 0–3 pkt, max 21
+const QUIZ = [
+  {
+    eyebrow: "Pytanie 01 · Energia",
+    title: "Jak opisał(a)byś swój poziom energii w ciągu dnia?",
+    sub: "Pomyśl o typowym, średnim dniu ostatniego tygodnia.",
+    answers: [
+      { label: "Pełen(pełna) energii od rana do wieczora", score: 0 },
+      { label: "W porządku, choć miewam chwile zmęczenia", score: 1 },
+      { label: "Czuję, że tracę siły już po południu", score: 2 },
+      { label: "Nie mam sił na codzienne sprawy", score: 3 },
+    ],
+  },
+  {
+    eyebrow: "Pytanie 02 · Sen",
+    title: "Jak się budzisz rano?",
+    sub: "Chodzi o ogólne wrażenie po przebudzeniu.",
+    answers: [
+      { label: "Wypoczęty(a) i gotowy(a) do działania", score: 0 },
+      { label: "Zwykle dobrze, czasem z trudem", score: 1 },
+      { label: "Często mam wrażenie, że nie odpocząłem(am)", score: 2 },
+      { label: "Prawie zawsze z ciężką głową i znużeniem", score: 3 },
+    ],
+  },
+  {
+    eyebrow: "Pytanie 03 · Trawienie",
+    title: "Jak czujesz się po posiłkach?",
+    sub: "Uwzględnij lekkość, wzdęcia, komfort.",
+    answers: [
+      { label: "Lekko i komfortowo", score: 0 },
+      { label: "Zazwyczaj dobrze, z rzadkimi wyjątkami", score: 1 },
+      { label: "Często czuję ciężkość lub wzdęcia", score: 2 },
+      { label: "Prawie po każdym posiłku mam dyskomfort", score: 3 },
+    ],
+  },
+  {
+    eyebrow: "Pytanie 04 · Koncentracja",
+    title: "Jak łatwo skupiasz się na codziennych czynnościach?",
+    sub: "Czytanie, rozmowa, prowadzenie spraw domowych.",
+    answers: [
+      { label: "Bez trudu, skupienie przychodzi naturalnie", score: 0 },
+      { label: "W porządku, czasem muszę się zmobilizować", score: 1 },
+      { label: 'Coraz częściej rozmywają mi się myśli', score: 2 },
+      { label: "Trudno mi utrzymać uwagę nawet przez chwilę", score: 3 },
+    ],
+  },
+  {
+    eyebrow: "Pytanie 05 · Skóra i cera",
+    title: "Jak wygląda Twoja skóra ostatnimi czasy?",
+    sub: "Koloryt, nawilżenie, blask.",
+    answers: [
+      { label: "Zdrowa, nawilżona, z naturalnym blaskiem", score: 0 },
+      { label: "Ogólnie dobra, miewa gorsze momenty", score: 1 },
+      { label: "Szarawa, matowa, czasem podrażniona", score: 2 },
+      { label: "Bardzo zmęczona, szara, bez blasku", score: 3 },
+    ],
+  },
+  {
+    eyebrow: "Pytanie 06 · Nastrój",
+    title: "Jak opisał(a)byś swoje nastroje ostatnio?",
+    sub: "Równowaga, spokój, drobne zmartwienia.",
+    answers: [
+      { label: "Spokojny(a) i w równowadze", score: 0 },
+      { label: "Ogólnie dobrze, bywają gorsze dni", score: 1 },
+      { label: "Często jestem rozdrażniony(a) lub przygaszony(a)", score: 2 },
+      { label: "Zmęczenie psychiczne towarzyszy mi codziennie", score: 3 },
+    ],
+  },
+  {
+    eyebrow: "Pytanie 07 · Nawodnienie",
+    title: "Jak często pijesz czystą wodę w ciągu dnia?",
+    sub: "Nie licząc kawy, herbaty i soków.",
+    answers: [
+      { label: "Regularnie — to mój codzienny rytuał", score: 0 },
+      { label: "Staram się, choć nie zawsze pamiętam", score: 1 },
+      { label: "Rzadko — głównie herbata lub kawa", score: 2 },
+      { label: "Prawie nigdy nie piję samej wody", score: 3 },
+    ],
+  },
+];
+window.QUIZ = QUIZ;
+window.QUIZ_MAX = QUIZ.length * 3; // 21
+</script>
+
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+// ─── Tile ───────────────────────────────────────────
+function Tile({ answer, index, selected, onSelect }) {
+  const letters = ['A', 'B', 'C', 'D'];
+  return (
+    <button
+      className={'tile' + (selected ? ' selected' : '')}
+      onClick={onSelect}
+      aria-pressed={selected}
+      aria-label={`Odpowiedź ${letters[index]}: ${answer.label}`}
+    >
+      <div className="tile-image" aria-hidden="true">
+        <div className="placeholder" data-label={'Foto · ' + letters[index]}></div>
+      </div>
+      <span className="tile-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5">
+          <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </span>
+      <div className="tile-body">
+        <span className="tile-index">Odpowiedź {letters[index]}</span>
+        <span className="tile-label">{answer.label}</span>
+      </div>
+    </button>
+  );
+}
+
+// ─── Landing ─────────────────────────────────────────
+function Landing({ onStart }) {
+  return (
+    <main id="main" className="landing view" aria-labelledby="hero-title">
+      <div className="landing-copy">
+        <div className="eyebrow">Krótki test · 7 pytań · 2 minuty</div>
+        <h1 id="hero-title">Sprawdź, czy&nbsp;Twój organizm prosi o&nbsp;moment oddechu.</h1>
+        <p className="lead">
+          Krótki, łagodny kwestionariusz, który pomoże Ci spojrzeć
+          na codzienne samopoczucie z&nbsp;nowej perspektywy — bez ocen
+          i&nbsp;bez diagnoz. Odpowiadaj spokojnie, tak jak czujesz.
+        </p>
+        <div className="landing-cta">
+          <button className="btn btn-primary" onClick={onStart} aria-describedby="quiz-meta">
+            Zacznij quiz
+            <svg className="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div className="meta" id="quiz-meta">
+          <div>✅ 7 krótkich pytań</div>
+          <div>✅ bez logowania</div>
+          <div>✅ wynik od razu</div>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+// ─── Question ─────────────────────────────────────────
+function Question({ step, total, data, selected, onAnswer, onBack, onNext, layout }) {
+  const canNext = selected !== null && selected !== undefined;
+  const pct = ((step + 1) / total) * 100;
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.key === 'ArrowRight' && canNext) onNext();
+      if (e.key === 'ArrowLeft' && step > 0) onBack();
+      const n = parseInt(e.key, 10);
+      if (n >= 1 && n <= 4) onAnswer(n - 1);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [step, canNext, onNext, onBack, onAnswer]);
+
+  return (
+    <main
+      id="main"
+      className="question-view"
+      style={{ animation: 'fadeSlide .35s cubic-bezier(.2,.8,.2,1)' }}
+      aria-labelledby="q-title"
+    >
+      <div className="progress-wrap" aria-live="polite">
+        <div
+          className="progress-bar"
+          role="progressbar"
+          aria-valuenow={step + 1}
+          aria-valuemin={1}
+          aria-valuemax={total}
+          aria-label={`Postęp: pytanie ${step + 1} z ${total}`}
+        >
+          <div className="progress-fill" style={{ width: pct + '%' }}></div>
+        </div>
+        <div className="progress-label" aria-hidden="true">
+          Pytanie <b>{step + 1}</b> z <b>{total}</b>
+        </div>
+      </div>
+
+      <div className="question">
+        <div className="question-head">
+          <span className="eyebrow">{data.eyebrow}</span>
+          <h2 id="q-title">{data.title}</h2>
+          {data.sub && <p className="sub">{data.sub}</p>}
+        </div>
+
+        <div
+          className={'tiles ' + (layout === '1x4' ? 'grid-1x4' : 'grid-2x2')}
+          role="radiogroup"
+          aria-label={data.title}
+        >
+          {data.answers.map((a, i) => (
+            <Tile
+              key={i}
+              answer={a}
+              index={i}
+              selected={selected === i}
+              onSelect={() => onAnswer(i)}
+            />
+          ))}
+        </div>
+
+        <nav className="q-nav" aria-label="Nawigacja quizu">
+          <button
+            className="btn btn-ghost"
+            onClick={onBack}
+            disabled={step === 0}
+            style={{ opacity: step === 0 ? 0.42 : 1 }}
+          >
+            <svg className="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <path d="M19 12H5M11 5l-7 7 7 7" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            Wstecz
+          </button>
+          <button
+            className="btn btn-primary"
+            onClick={onNext}
+            disabled={!canNext}
+            style={{ opacity: canNext ? 1 : 0.42 }}
+          >
+            {step === total - 1 ? 'Zobacz wynik' : 'Dalej'}
+            <svg className="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </main>
+  );
+}
+
+// ─── Result ─────────────────────────────────────────
+function Result({ score, max, onRestart, onContinue }) {
+  const pct = Math.round((score / max) * 100);
+  const needsDetox = pct >= 50;
+
+  let tier;
+  if (pct < 25) {
+    tier = {
+      heading: "Twój organizm wydaje się być w dobrej równowadze.",
+      summary: "Zachowujesz wiele zdrowych nawyków, które wspierają Cię na co dzień. To dobry moment, żeby docenić swoje małe rytuały i pielęgnować to, co już działa.",
+      cards: [
+        { tag: "Zachowaj", title: "Rytuały", body: "Woda, ruch, dobry sen — te elementy pracują dla Ciebie." },
+        { tag: "Pielęgnuj", title: "Spokój", body: "Drobne przerwy w ciągu dnia robią ogromną różnicę." },
+      ],
+    };
+  } else if (pct < 50) {
+    tier = {
+      heading: "Drobne sygnały — nic niepokojącego, ale warto się im przyjrzeć.",
+      summary: "Twoje samopoczucie jest w większości w porządku, choć pojawiają się dni, które mogłyby być lżejsze. Małe zmiany w codziennych nawykach mogą przynieść zauważalną różnicę.",
+      cards: [
+        { tag: "Zwróć uwagę", title: "Nawodnienie", body: "Szklanka wody co 2 godziny potrafi zmienić dzień." },
+        { tag: "Rozważ", title: "Dłuższy sen", body: "Nawet 30 minut więcej odpoczynku to inwestycja." },
+        { tag: "Spróbuj", title: "Krótki spacer", body: "15 minut dziennie na świeżym powietrzu." },
+      ],
+    };
+  } else if (pct < 75) {
+    tier = {
+      heading: "Może to dobry moment, żeby podarować sobie chwilę odnowy.",
+      summary: "Kilka obszarów Twojego samopoczucia daje znać, że odrobina świadomej uwagi — łagodnej, spokojnej — mogłaby przynieść ulgę. To nie jest diagnoza. To zaproszenie, żeby zadbać o siebie z czułością.",
+      cards: [
+        { tag: "Warto", title: "Lekkość", body: "Przyjrzyj się temu, co jesz i pijesz przez tydzień." },
+        { tag: "Warto", title: "Oddech", body: "Codziennie kilka minut spokojnego oddechu." },
+        { tag: "Warto", title: "Wsparcie", body: "Istnieją delikatne rozwiązania, które mogą pomóc." },
+      ],
+    };
+  } else {
+    tier = {
+      heading: "Twoje ciało dość wyraźnie prosi o troskę.",
+      summary: "Wiele odpowiedzi wskazuje, że codzienne zmęczenie i dyskomfort towarzyszą Ci częściej niż powinny. Nie ma powodu do niepokoju — jest jednak dobry powód, żeby spokojnie zastanowić się nad odnową i łagodnym detoksem.",
+      cards: [
+        { tag: "Zacznij od", title: "Rozmowy", body: "Krótka konsultacja z kimś, komu ufasz." },
+        { tag: "Wypróbuj", title: "Regenerację", body: "Kilka dni lżejszej diety i więcej wody." },
+        { tag: "Pomyśl o", title: "Wsparciu", body: "Łagodne programy odnowy bywają pomocne." },
+      ],
+    };
+  }
+
+  const r = 115;
+  const C = 2 * Math.PI * r;
+  const offset = C - (pct / 100) * C;
+
+  return (
+    <main id="main" className="result view" aria-labelledby="result-heading">
+      <div className="result-score" role="img" aria-label={`Wynik: ${pct} procent`}>
+        <svg viewBox="0 0 260 260" aria-hidden="true">
+          <circle className="track" cx="130" cy="130" r={r} />
+          <circle
+            className="fill"
+            cx="130" cy="130" r={r}
+            strokeDasharray={C}
+            strokeDashoffset={offset}
+          />
+        </svg>
+        <div className="num" aria-hidden="true">
+          <b>{pct}%</b>
+          <span>Twój wynik</span>
+        </div>
+      </div>
+
+      <h2 id="result-heading">{tier.heading}</h2>
+      <p className="summary">{tier.summary}</p>
+
+      <div className="result-cards">
+        {tier.cards.map((c, i) => (
+          <div key={i} className="r-card">
+            <span className="mono">{c.tag}</span>
+            <b>{c.title}</b>
+            <p>{c.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="result-actions">
+        <button className="btn btn-ghost" onClick={onRestart}>
+          Zrób test jeszcze raz
+        </button>
+        {needsDetox && (
+          <button className="btn btn-primary" onClick={onContinue}>
+            Zobacz łagodne rozwiązanie
+            <svg className="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        )}
+      </div>
+
+      <p className="mono disclaimer">
+        Wynik ma charakter orientacyjny. Nie zastępuje konsultacji ze specjalistą.
+      </p>
+    </main>
+  );
+}
+
+// ─── App ─────────────────────────────────────────────
+function App() {
+  const [stage, setStage] = useState(() => localStorage.getItem('quiz_stage') || 'landing');
+  const [step, setStep] = useState(() => parseInt(localStorage.getItem('quiz_step') || '0', 10));
+  const [answers, setAnswers] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('quiz_answers') || '[]'); } catch { return []; }
+  });
+
+  const [theme, setTheme] = useState('sage');
+  const [textSize, setTextSize] = useState('xlarge');
+  const [layout, setLayout] = useState('2x2');
+  const [tweaksOpen, setTweaksOpen] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('quiz_stage', stage);
+    localStorage.setItem('quiz_step', String(step));
+    localStorage.setItem('quiz_answers', JSON.stringify(answers));
+  }, [stage, step, answers]);
+
+  useEffect(() => {
+    document.body.classList.remove('theme-sage', 'theme-earth', 'theme-mineral');
+    document.body.classList.add('theme-' + theme);
+  }, [theme]);
+
+  useEffect(() => {
+    const sizes = { large: '22px', xlarge: '24px', xxlarge: '28px' };
+    document.documentElement.style.setProperty('--base', sizes[textSize] || '24px');
+  }, [textSize]);
+
+  const handleStart    = () => { setStage('quiz'); setStep(0); setAnswers([]); };
+  const handleAnswer   = (idx) => { const next = [...answers]; next[step] = idx; setAnswers(next); };
+  const handleNext     = () => {
+    if (step < window.QUIZ.length - 1) setStep(step + 1);
+    else setStage('result');
+  };
+  const handleBack     = () => { if (step > 0) setStep(step - 1); };
+  const handleRestart  = () => { setAnswers([]); setStep(0); setStage('landing'); };
+  const handleContinue = () => { alert('W kolejnym projekcie: przejście na landing produktu.'); };
+
+  const score = answers.reduce((sum, aIdx, qIdx) => {
+    if (aIdx == null) return sum;
+    return sum + (window.QUIZ[qIdx]?.answers[aIdx]?.score || 0);
+  }, 0);
+
+  return (
+    <div className="app">
+      <a href="#main" className="skip-link">Pomiń do treści</a>
+
+      <header className="brandbar" role="banner">
+        <img src="logo.png" alt="Rady Cioci Zosi" style={{height: '64px', width: 'auto', display: 'block'}} />
+      </header>
+
+      {stage === 'landing' && <Landing onStart={handleStart} />}
+      {stage === 'quiz'    && (
+        <Question
+          step={step}
+          total={window.QUIZ.length}
+          data={window.QUIZ[step]}
+          selected={answers[step]}
+          onAnswer={handleAnswer}
+          onBack={handleBack}
+          onNext={handleNext}
+          layout={layout}
+        />
+      )}
+      {stage === 'result'  && (
+        <Result
+          score={score}
+          max={window.QUIZ_MAX}
+          onRestart={handleRestart}
+          onContinue={handleContinue}
+        />
+      )}
+
+      {/* Tweaks toggle */}
+      <button
+        className="tweaks-toggle"
+        onClick={() => setTweaksOpen(o => !o)}
+        aria-label="Panel ustawień"
+        aria-expanded={tweaksOpen}
+        title="Ustawienia wyglądu"
+      >
+        ⚙
+      </button>
+
+      {tweaksOpen && (
+        <div className="tweaks-panel" role="region" aria-label="Panel ustawień">
+          <h4>Ustawienia</h4>
+          <label>
+            Kierunek wizualny
+            <div className="tweaks-group" role="group">
+              {[['sage','Szałwia'],['earth','Ziemia'],['mineral','Mineral']].map(([k,label]) => (
+                <button key={k} className={theme===k?'active':''} aria-pressed={theme===k}
+                        onClick={()=>setTheme(k)}>{label}</button>
+              ))}
+            </div>
+          </label>
+          <label>
+            Rozmiar tekstu
+            <div className="tweaks-group" role="group">
+              {[['large','L'],['xlarge','XL'],['xxlarge','XXL']].map(([k,label]) => (
+                <button key={k} className={textSize===k?'active':''} aria-pressed={textSize===k}
+                        onClick={()=>setTextSize(k)}>{label}</button>
+              ))}
+            </div>
+          </label>
+          <label>
+            Układ kafli
+            <div className="tweaks-group" role="group">
+              {[['2x2','2×2'],['1x4','1×4']].map(([k,label]) => (
+                <button key={k} className={layout===k?'active':''} aria-pressed={layout===k}
+                        onClick={()=>setLayout(k)}>{label}</button>
+              ))}
+            </div>
+          </label>
+        </div>
+      )}
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+</script>
+</body>
+</html>

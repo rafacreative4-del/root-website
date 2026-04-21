@@ -1,0 +1,79 @@
+/*
+ * GLOBAL DESIGN TOKENS
+ * ─────────────────────────────────────────────
+ * Zmień tutaj → zmieni się wszędzie (quiz + landing page).
+ *
+ * Użycie w plikach:
+ *   --navy, --accent  → var(--color-primary)
+ *   --gray-800, --ink → var(--color-text)
+ *   itd.
+ */
+
+/* ─── FONTS ──────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap');
+
+:root {
+  /* Typografia */
+  --font-primary:  'Poppins', sans-serif;
+  --font-mono:     'JetBrains Mono', ui-monospace, monospace;
+
+  /* ─── KOLORY BRANDOWE ─────────────────────── */
+  /* Zmień te dwie linie żeby zmienić kolor główny wszędzie */
+  --color-primary:       #C5A75E;
+  --color-primary-hover: #b8963f;
+  --color-primary-dark:  #a0802e;
+  --color-primary-soft:  #f0e8d0;
+  --color-primary-text:  #ffffff;
+
+  /* ─── TŁA ─────────────────────────────────── */
+  --color-bg:          #ffffff;
+  --color-bg-muted:    #F4F4F4;
+  --color-bg-elevated: #F7F3EA;     /* ciepłe tło kart w quizie */
+  --color-bg-surface:  #f8f8f8;     /* neutralne tło kart w landing */
+
+  /* ─── TEKST ───────────────────────────────── */
+  --color-text:           #1A1A1A;
+  --color-text-secondary: #3A352E;  /* ciemny szary */
+  --color-text-muted:     #1A1A1A;  /* wyciszony */
+  --color-text-placeholder: #999999;
+
+  /* ─── UI ──────────────────────────────────── */
+  --color-border:         #e0e0e0;
+  --color-border-strong:  #A9A090;
+  --color-star:           #f5a623;
+  --color-danger:         #e74c3c;
+  --color-success:        #27ae60;
+
+  /* ─── CIENIE ──────────────────────────────── */
+  --shadow-sm:   0 1px 2px rgba(15,13,10,.08), 0 8px 24px rgba(15,13,10,.10);
+  --shadow-md:   0 2px 6px rgba(15,13,10,.10), 0 20px 48px rgba(15,13,10,.16);
+  --shadow-card: 0 2px 12px rgba(0,0,0,.06);
+
+  /* ─── KSZTAŁTY ────────────────────────────── */
+  --radius:    14px;
+  --radius-sm: 10px;
+  --radius-xs:  6px;
+
+  /* ─── SPACING ─────────────────────────────── */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 70px;
+}
+
+/* ─── RESET PODSTAWOWY ────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+button { font-family: var(--font-primary); cursor: pointer; border: none; background: none; color: inherit; }
