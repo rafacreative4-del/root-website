@@ -226,6 +226,11 @@
       height: 7px;
       border-radius: 50%;
       background: var(--red);
+      animation: pulse-dot 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .35; transform: scale(1.4); }
     }
 
     /* Quantity options */
@@ -385,8 +390,8 @@
     }
 
     .trust-icon {
-      width: 36px;
-      height: 36px;
+      width: 52px;
+      height: 52px;
       background: var(--gray-100);
       border-radius: 50%;
       display: flex;
@@ -396,8 +401,8 @@
     }
 
     .trust-icon svg {
-      width: 18px;
-      height: 18px;
+      width: 26px;
+      height: 26px;
       stroke: var(--navy);
       fill: none;
       stroke-width: 1.8;
@@ -951,7 +956,7 @@
 
   <!-- HEADER (brandbar — identyczny jak w quiz) -->
   <header>
-    <img src="images/Root-Logo-Black-280x280.png" alt="Root Brands" style="height:80px;width:auto;display:block;" />
+    <img src="/Users/rafalkieblesz/Desktop/Root-Logo-Black-280x280.png" alt="Root Brands" style="height:80px;width:auto;display:block;" />
   </header>
 
   <!-- HERO BANNER -->
@@ -966,16 +971,16 @@
       <!-- Gallery left -->
       <div id="galleryCol" style="min-width:0;position:sticky;align-self:flex-start;">
         <div class="gallery-main" id="galleryMain">
-          <img id="gallerySlide0" src="images/Generated Image April 20, 2026 - 3_34PM.jpg" style="display:block;" />
-          <img id="gallerySlide1" src="images/Generated Image April 20, 2026 - 4_15PM.jpg" style="display:none;" />
-          <img id="gallerySlide2" src="images/Generated Image April 20, 2026 - 4_22PM.jpg" style="display:none;" />
-          <img id="gallerySlide3" src="images/Generated Image April 20, 2026 - 4_31PM.jpg" style="display:none;" />
-          <img id="gallerySlide4" src="images/Generated Image April 20, 2026 - 5_32PM.jpg" style="display:none;" />
-          <img id="gallerySlide5" src="images/Generated Image April 20, 2026 - 7_16PM.jpg" style="display:none;" />
-          <img id="gallerySlide6" src="images/Generated Image April 20, 2026 - 7_30PM.jpg" style="display:none;" />
-          <img id="gallerySlide7" src="images/Generated Image April 20, 2026 - 7_35PM.jpg" style="display:none;" />
-          <img id="gallerySlide8" src="images/Generated Image April 20, 2026 - 7_39PM.jpg" style="display:none;" />
-          <img id="gallerySlide9" src="images/Generated Image April 20, 2026 - 7_47PM.jpg" style="display:none;" />
+          <img id="gallerySlide0" src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 3_34PM.jpg" style="display:block;" />
+          <img id="gallerySlide1" src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 4_15PM.jpg" style="display:none;" />
+          <img id="gallerySlide2" src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 4_22PM.jpg" style="display:none;" />
+          <img id="gallerySlide3" src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 4_31PM.jpg" style="display:none;" />
+          <img id="gallerySlide4" src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 5_32PM.jpg" style="display:none;" />
+          <img id="gallerySlide5" src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_16PM.jpg" style="display:none;" />
+          <img id="gallerySlide6" src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_30PM.jpg" style="display:none;" />
+          <img id="gallerySlide7" src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_35PM.jpg" style="display:none;" />
+          <img id="gallerySlide8" src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_39PM.jpg" style="display:none;" />
+          <img id="gallerySlide9" src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_47PM.jpg" style="display:none;" />
         </div>
         <div class="gallery-nav">
           <button class="gallery-btn" id="galleryPrev" onclick="galleryMove(-1)">
@@ -983,16 +988,16 @@
           </button>
           <div class="thumbs-wrap">
             <div class="thumbs" id="galleryThumbs">
-              <div class="thumb" onclick="galleryGoto(0)"><img src="images/Generated Image April 20, 2026 - 3_34PM.jpg" /></div>
-              <div class="thumb" onclick="galleryGoto(1)"><img src="images/Generated Image April 20, 2026 - 4_15PM.jpg" /></div>
-              <div class="thumb" onclick="galleryGoto(2)"><img src="images/Generated Image April 20, 2026 - 4_22PM.jpg" /></div>
-              <div class="thumb" onclick="galleryGoto(3)"><img src="images/Generated Image April 20, 2026 - 4_31PM.jpg" /></div>
-              <div class="thumb" onclick="galleryGoto(4)"><img src="images/Generated Image April 20, 2026 - 5_32PM.jpg" /></div>
-              <div class="thumb" onclick="galleryGoto(5)"><img src="images/Generated Image April 20, 2026 - 7_16PM.jpg" /></div>
-              <div class="thumb" onclick="galleryGoto(6)"><img src="images/Generated Image April 20, 2026 - 7_30PM.jpg" /></div>
-              <div class="thumb" onclick="galleryGoto(7)"><img src="images/Generated Image April 20, 2026 - 7_35PM.jpg" /></div>
-              <div class="thumb" onclick="galleryGoto(8)"><img src="images/Generated Image April 20, 2026 - 7_39PM.jpg" /></div>
-              <div class="thumb" onclick="galleryGoto(9)"><img src="images/Generated Image April 20, 2026 - 7_47PM.jpg" /></div>
+              <div class="thumb" onclick="galleryGoto(0)"><img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 3_34PM.jpg" /></div>
+              <div class="thumb" onclick="galleryGoto(1)"><img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 4_15PM.jpg" /></div>
+              <div class="thumb" onclick="galleryGoto(2)"><img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 4_22PM.jpg" /></div>
+              <div class="thumb" onclick="galleryGoto(3)"><img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 4_31PM.jpg" /></div>
+              <div class="thumb" onclick="galleryGoto(4)"><img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 5_32PM.jpg" /></div>
+              <div class="thumb" onclick="galleryGoto(5)"><img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_16PM.jpg" /></div>
+              <div class="thumb" onclick="galleryGoto(6)"><img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_30PM.jpg" /></div>
+              <div class="thumb" onclick="galleryGoto(7)"><img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_35PM.jpg" /></div>
+              <div class="thumb" onclick="galleryGoto(8)"><img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_39PM.jpg" /></div>
+              <div class="thumb" onclick="galleryGoto(9)"><img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_47PM.jpg" /></div>
             </div>
           </div>
           <button class="gallery-btn" id="galleryNext" onclick="galleryMove(1)">
@@ -1005,7 +1010,7 @@
       <div class="buy-box">
         <h1>Zestaw Trinity</h1>
 
-        <div class="stars-row">
+        <a href="https://www.trustpilot.com/review/therootbrands.com" target="_blank" rel="noopener" class="stars-row" style="text-decoration:none;">
           <div class="stars">
             <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1013,24 +1018,24 @@
             <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <span class="rating-text">4,9 · 312 opinii</span>
-        </div>
+          <span class="rating-text">4,6 · 2 236 opinii</span>
+        </a>
 
         <ul class="bullets">
-          <li><span class="emoji">🧠</span> Koniec z mgłą mózgową — ostrość myślenia wraca w ciągu dni</li>
+          <li><span class="emoji">🧠</span> Wsparcie jasności umysłu — lepsza koncentracja na co dzień</li>
           <li><span class="emoji">⚡</span> Energia bez kawy — naturalna stymulacja dopaminy przez 14h</li>
-          <li><span class="emoji">🌿</span> Detoks komórkowy — zeolity wymiatają toksyny i metale ciężkie</li>
-          <li><span class="emoji">😴</span> Głębszy sen — koniec z budzeniem się o 3 w nocy</li>
-          <li><span class="emoji">🦴</span> Mniej bólów stawów — Restore odbudowuje mikrobiom i redukuje stan zapalny</li>
-          <li><span class="emoji">💚</span> 100% naturalne składniki — bez hormonów, bez syntetyków</li>
+          <li><span class="emoji">🌿</span> Naturalne oczyszczanie — ułatwia prawidłowe procesy w ciele.</li>
+          <li><span class="emoji">😴</span> Spokojny i głęboki sen — ułatwia zasypianie i nocną regenerację</li>
+          <li><span class="emoji">🛡️</span> Silna odporność — dba o naturalne siły obronne organizmu.</li>
+          <li><span class="emoji">💚</span> 100% z natury — czysty skład bez syntetycznych dodatków</li>
         </ul>
 
-        <div class="low-stock-badge">Niski stan magazynowy — zamów poniżej</div>
+        <div class="low-stock-badge">Ogromne zainteresowanie! Tysiące osób już dba o siebie</div>
 
         <div class="qty-options">
           <div class="qty-option">
             <div id="qty-img-zacznij" style="width:90px;height:90px;border-radius:8px;overflow:hidden;flex-shrink:0;margin-right:12px;background:#ffffff;display:flex;align-items:center;justify-content:center;">
-              <img src="images/Value-Pack.png" alt="Value Pack" style="width:100%;height:100%;object-fit:cover;display:block;" />
+              <img src="/Users/rafalkieblesz/Downloads/Value-Pack_092223.png_height=2048&v=1758888209&width=2048.png" alt="Value Pack" style="width:100%;height:100%;object-fit:cover;display:block;" />
             </div>
             <div class="qty-option-left" style="flex:1;">
               <span class="qty-name">Zacznij od Nowa</span>
@@ -1045,7 +1050,7 @@
           <div class="qty-option selected">
             <div class="qty-badge">Najczęściej wybierana</div>
             <div id="qty-img-pelna" style="width:90px;height:90px;border-radius:8px;overflow:hidden;flex-shrink:0;margin-right:12px;background:#ffffff;display:flex;align-items:center;justify-content:center;">
-              <img src="images/Trinity.png" alt="Trinity Pack" style="width:100%;height:100%;object-fit:cover;display:block;" />
+              <img src="/Users/rafalkieblesz/Downloads/Trinity_092223.png_height=2048&v=1758890089&width=2048.png" alt="Zestaw Trinity" style="width:100%;height:100%;object-fit:cover;display:block;" />
             </div>
             <div class="qty-option-left" style="flex:1;">
               <span class="qty-name">Pełna Regeneracja</span>
@@ -1060,7 +1065,7 @@
           <div class="qty-option">
             <div class="qty-badge best">Najlepsza wartość</div>
             <div id="qty-img-kompletna" style="width:90px;height:90px;border-radius:8px;overflow:hidden;flex-shrink:0;margin-right:12px;background:#ffffff;display:flex;align-items:center;justify-content:center;">
-              <img src="images/DrRahmPack.png" alt="DrRahm Pack" style="width:100%;height:100%;object-fit:cover;display:block;" />
+              <img src="/Users/rafalkieblesz/Downloads/DrRahmPack2_07.23.24.jpg_v=1758894154.png" alt="DrRahm Pack" style="width:100%;height:100%;object-fit:cover;display:block;" />
             </div>
             <div class="qty-option-left" style="flex:1;">
               <span class="qty-name">Kompletna Przemiana</span>
@@ -1108,14 +1113,14 @@
 
         <div style="width:100%;display:block;background:var(--gray-100);border-radius:8px;padding:18px 20px;margin-bottom:16px;">
           <div style="display:flex;gap:20px;align-items:center;margin-bottom:14px;">
-            <img src="images/avatar.png" alt="" style="width:100px;height:100px;border-radius:8px;object-fit:cover;flex-shrink:0;" />
+            <img src="/Users/rafalkieblesz/Downloads/1_QZFrT7itWeuUng8-cGpk8A.png" alt="" style="width:100px;height:100px;border-radius:8px;object-fit:cover;flex-shrink:0;" />
             <div>
               <div style="font-size:19px;font-weight:600;color:var(--gray-800);">dr. Christina Rahm</div>
               <div style="font-size:16px;color:var(--gray-600);">biotechnolog i naukowiec farmaceutyczny</div>
             </div>
           </div>
           <div style="font-size:16px;line-height:1.7;color:#1A1A1A;">
-            Stworzyłam Trinity Pack, bo przez lata w firmach farmaceutycznych widziałam, że medycyna leczy choroby zamiast ich przyczyn. Toksyny i ciężkie metale w naszym ciele wywołują stan zapalny, który niszczy zdrowie... i postanowiłam to zmienić. Trinity Pack to moja odpowiedź na to, czego brakowało w medycynie: codzienne, głębokie oczyszczanie organizmu na poziomie komórkowym, które daje ci <strong>realną kontrolę nad własnym zdrowiem.</strong>
+            Stworzyłam Zestaw Trinity, ponieważ moje lata pracy jako naukowiec w branży biotechnologicznej pokazały mi, jak ważne jest docieranie do samych korzeni naszego samopoczucia. Dzisiejsze tempo życia, wszechobecny stres i obciążenia środowiskowe potrafią zaburzyć naszą wewnętrzną równowagę, powoli odbierając nam witalność... i postanowiłam to zmienić. Zestaw Trinity to moja odpowiedź i wizja holistycznego podejścia: to codzienne wsparcie naturalnych procesów w ciele, które przywraca harmonię i daje Ci <strong>realną kontrolę nad tym, jak czujesz się każdego dnia.</strong>
           </div>
         </div>
 
@@ -1160,15 +1165,24 @@
   <section style="padding: clamp(30px,4vh,60px) 0; background: var(--white);">
     <div style="max-width:1300px;margin:0 auto;padding:0 clamp(20px,5vw,70px);">
       <h2 style="text-align:center;font-size:clamp(32px,4vw,54px);font-weight:800;margin-bottom:clamp(20px,3vh,40px);color:var(--gray-800);">
-        Dlaczego kobiety po 50-tce<br><span style="color:var(--navy);">pokochały</span> Zestaw Trinity
+        Zadbaj o siebie z Zestawem Trinity<br>i <span style="color:#b8922a;">ciesz się każdym dniem</span> w pełni.
       </h2>
     </div>
 
     <!-- Desktop: grid -->
     <div class="ugc-grid" style="max-width:1300px;margin:0 auto;padding:0 clamp(20px,5vw,70px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.5vw,24px);">
-      <video src="Character_shows_product_202604201555.mp4" style="border-radius:12px;aspect-ratio:9/16;width:100%;object-fit:cover;display:block;" autoplay playsinline muted loop></video>
-      <video src="Character_smiles_says_202604201649.mp4"   style="border-radius:12px;aspect-ratio:9/16;width:100%;object-fit:cover;display:block;" autoplay playsinline muted loop></video>
-      <video src="Character_smiles_at_202604201751.mp4"    style="border-radius:12px;aspect-ratio:9/16;width:100%;object-fit:cover;display:block;" autoplay playsinline muted loop></video>
+      <div style="position:relative;">
+        <video src="Character_shows_product_202604201555.mp4" style="border-radius:12px;aspect-ratio:9/16;width:100%;object-fit:cover;display:block;" autoplay playsinline muted loop></video>
+        <p style="position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:10px;color:rgba(255,255,255,.92);margin:0;pointer-events:none;">Zdjęcia mają charakter wyłącznie poglądowy</p>
+      </div>
+      <div style="position:relative;">
+        <video src="Character_smiles_says_202604201649.mp4" style="border-radius:12px;aspect-ratio:9/16;width:100%;object-fit:cover;display:block;" autoplay playsinline muted loop></video>
+        <p style="position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:10px;color:rgba(255,255,255,.92);margin:0;pointer-events:none;">Zdjęcia mają charakter wyłącznie poglądowy</p>
+      </div>
+      <div style="position:relative;">
+        <video src="Character_smiles_at_202604201751.mp4" style="border-radius:12px;aspect-ratio:9/16;width:100%;object-fit:cover;display:block;" autoplay playsinline muted loop></video>
+        <p style="position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:10px;color:rgba(255,255,255,.92);margin:0;pointer-events:none;">Zdjęcia mają charakter wyłącznie poglądowy</p>
+      </div>
     </div>
 
     <!-- Mobile: carousel -->
@@ -1199,95 +1213,128 @@
     <div style="max-width: 1300px; margin: 0 auto; padding: 0 clamp(20px,5vw,70px); text-align: center;">
 
       <div style="font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--navy);margin-bottom:12px;">Mechanizm działania</div>
-      <h2 style="font-size:clamp(32px,4vw,54px);font-weight:800;color:var(--gray-800);line-height:1.1;margin-bottom:20px;">Dlaczego Zestaw Trinity <span style="color:var(--navy);">działa</span>,<br>gdy wszystko inne zawodzi</h2>
+      <h2 style="font-size:clamp(32px,4vw,54px);font-weight:800;color:var(--gray-800);line-height:1.1;margin-bottom:20px;">Jak Zestaw Trinity <span style="color:#b8922a;">pomaga odzyskać</span> naturalną równowagę?</h2>
       <p style="font-size:clamp(15px,1.4vw,18px);color:var(--gray-600);line-height:1.8;margin-bottom:40px;max-width:640px;margin-left:auto;margin-right:auto;">
-        Zestaw Trinity to flagowy system trzech kroków, stworzony, aby pomóc Ci zresetować i zoptymalizować swoje zdrowie poprzez oczyszczenie organizmu, przywrócenie energii i wyostrzenie koncentracji.
+        Zestaw Trinity to flagowy system trzech kroków, stworzony, aby kompleksowo wspierać Twoje dobre samopoczucie, ułatwić naturalne procesy organizmu, dodać witalności i sprzyjać lepszej koncentracji.
       </p>
 
       <!-- 3-product rows -->
-      <div style="display:flex;flex-direction:column;gap:24px;text-align:left;">
+      <div style="display:flex;flex-direction:column;gap:56px;">
 
-        <!-- Clean Slate -->
+        <!-- ── CLEAN SLATE ── -->
         <div>
-          <div style="font-size:19px;font-weight:600;color:var(--gray-800);margin-bottom:6px;">Clean Slate</div>
-          <p style="font-size:16px;color:var(--gray-600);line-height:1.6;margin-bottom:16px;">Clean Slate pomaga organizmowi usuwać toksyny środowiskowe i wspiera naturalne szlaki detoksykacji.</p>
-          <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;">
-            <img src="images/Clean-Slate.png" alt="Clean Slate" style="width:200px;height:200px;object-fit:contain;border-radius:12px;background:var(--gray-100);" />
-            <div style="background:#f5f0e6;border:1.5px solid #d4c9a8;border-radius:16px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;overflow:hidden;height:200px;">
-              <div style="padding:20px;text-align:center;">
-                <div style="font-size:26px;margin-bottom:8px;">☠️</div>
-                <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Toksyny w komórkach</div>
-                <p style="font-size:12px;color:var(--gray-600);line-height:1.5;">Lata akumulacji metali ciężkich blokują funkcje komórkowe i wyczerpują energię</p>
-              </div>
-              <div style="color:var(--navy);font-size:26px;font-weight:900;padding:0 6px;line-height:1;">→</div>
-              <div style="padding:20px;text-align:center;">
-                <div style="font-size:26px;margin-bottom:8px;">🔬</div>
-                <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Zeolit działa</div>
-                <p style="font-size:12px;color:var(--gray-600);line-height:1.5;">Nanocząsteczki wiążą toksyny bezpośrednio w komórkach — bez usuwania minerałów</p>
-              </div>
-              <div style="color:var(--navy);font-size:26px;font-weight:900;padding:0 6px;line-height:1;">→</div>
-              <div style="padding:20px;text-align:center;">
-                <div style="font-size:26px;margin-bottom:8px;">✅</div>
-                <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Organizm się oczyszcza</div>
-                <p style="font-size:12px;color:var(--gray-600);line-height:1.5;">Energia wraca, mgła mózgowa odpływa, sen się normalizuje</p>
+          <div style="font-size:28px;font-weight:700;color:var(--gray-800);margin-bottom:6px;text-align:center;">Clean Slate</div>
+          <p style="font-size:16px;color:var(--gray-600);line-height:1.6;margin-bottom:24px;text-align:center;">Clean Slate pomaga organizmowi usuwać toksyny środowiskowe<br>i wspiera naturalne szlaki detoksykacji.</p>
+          <div style="display:flex;align-items:stretch;gap:16px;">
+
+            <div style="flex:1;display:flex;flex-direction:column;gap:0;min-width:0;">
+              <div style="background:#d0d0d0;border-radius:12px 12px 0 0;aspect-ratio:1/1;width:100%;"></div>
+              <div style="background:#ffffff;border:1.5px solid #e8e4dc;border-top:none;border-radius:0 0 12px 12px;padding:18px 16px;text-align:left;box-shadow:0 4px 16px rgba(0,0,0,0.07);flex:1;">
+                <div style="font-size:16px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#b8922a;margin-bottom:6px;">Codzienne obciążenia</div>
+                <p style="font-size:16px;color:var(--gray-600);line-height:1.5;">Każdego dnia mierzysz się z tym, czego nie widać: smogiem, chemią i mikroplastikiem. Te ukryte czynniki obciążają organizm, sprawiając, że brakuje Ci energii do działania.</p>
               </div>
             </div>
+
+            <div style="flex-shrink:0;font-size:28px;font-weight:900;color:#1a1a1a;align-self:center;padding:0 4px;">→</div>
+
+            <div style="flex:1;display:flex;flex-direction:column;gap:0;min-width:0;">
+              <div style="border-radius:12px 12px 0 0;aspect-ratio:1/1;width:100%;overflow:hidden;background:#f5f0e6;">
+                <img src="root-STRONA/images/Clean-Slate.png" alt="Clean Slate" style="width:100%;height:100%;object-fit:contain;display:block;padding:12px;box-sizing:border-box;" />
+              </div>
+              <div style="background:#ffffff;border:1.5px solid #e8e4dc;border-top:none;border-radius:0 0 12px 12px;padding:18px 16px;text-align:left;box-shadow:0 4px 16px rgba(0,0,0,0.07);flex:1;">
+                <div style="font-size:16px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#b8922a;margin-bottom:6px;">Naturalna ochrona</div>
+                <p style="font-size:16px;color:var(--gray-600);line-height:1.5;">Inteligentne wsparcie — precyzyjnie pomaga organizmowi w codziennych wyzwaniach, pozwalając mu jednocześnie zachować cenne minerały.</p>
+              </div>
+            </div>
+
+            <div style="flex-shrink:0;font-size:28px;font-weight:900;color:#1a1a1a;align-self:center;padding:0 4px;">→</div>
+
+            <div style="flex:1;display:flex;flex-direction:column;gap:0;min-width:0;">
+              <div style="background:#d0d0d0;border-radius:12px 12px 0 0;aspect-ratio:1/1;width:100%;"></div>
+              <div style="background:#ffffff;border:1.5px solid #e8e4dc;border-top:none;border-radius:0 0 12px 12px;padding:18px 16px;text-align:left;box-shadow:0 4px 16px rgba(0,0,0,0.07);flex:1;">
+                <div style="font-size:16px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#b8922a;margin-bottom:6px;">Codzienna lekkość</div>
+                <p style="font-size:16px;color:var(--gray-600);line-height:1.5;">Naturalne wsparcie witalności każdego dnia, sprzyjanie lepszej koncentracji i ułatwienie nocnej regeneracji.</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- Zero-In -->
+        <!-- ── ZERO-IN ── -->
         <div>
-          <div style="font-size:19px;font-weight:600;color:var(--gray-800);margin-bottom:6px;">Zero-In</div>
-          <p style="font-size:16px;color:var(--gray-600);line-height:1.6;margin-bottom:16px;">Zero-In wspiera koncentrację, jasność umysłu i równowagę neuroprzekaźników, poprawiając sprawność mentalną.</p>
-          <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;">
-            <img src="images/Zero-In.png" alt="Zero-In" style="width:200px;height:200px;object-fit:contain;border-radius:12px;background:var(--gray-100);" />
-            <div style="background:#f5f0e6;border:1.5px solid #d4c9a8;border-radius:16px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;overflow:hidden;height:200px;">
-              <div style="padding:20px;text-align:center;">
-                <div style="font-size:26px;margin-bottom:8px;">🧠</div>
-                <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Niedobór dopaminy</div>
-                <p style="font-size:12px;color:var(--gray-600);line-height:1.5;">Po 50-tce produkcja dopaminy spada o 30–40% — mgła, brak motywacji, kłopoty z pamięcią</p>
-              </div>
-              <div style="color:var(--navy);font-size:26px;font-weight:900;padding:0 6px;line-height:1;">→</div>
-              <div style="padding:20px;text-align:center;">
-                <div style="font-size:26px;margin-bottom:8px;">⚡</div>
-                <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Zero-In aktywuje</div>
-                <p style="font-size:12px;color:var(--gray-600);line-height:1.5;">N-acetylo-L-tyrozyna i ekstrakt z kory sosny naturalnie stymulują produkcję dopaminy</p>
-              </div>
-              <div style="color:var(--navy);font-size:26px;font-weight:900;padding:0 6px;line-height:1;">→</div>
-              <div style="padding:20px;text-align:center;">
-                <div style="font-size:26px;margin-bottom:8px;">🎯</div>
-                <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Ostrość przez 14h</div>
-                <p style="font-size:12px;color:var(--gray-600);line-height:1.5;">Koncentracja, pamięć i motywacja wracają — bez kofeiny, bez zjazdu</p>
+          <div style="font-size:28px;font-weight:700;color:var(--gray-800);margin-bottom:6px;text-align:center;">Zero-In</div>
+          <p style="font-size:16px;color:var(--gray-600);line-height:1.6;margin-bottom:24px;text-align:center;">Zero-In wspiera koncentrację, jasność umysłu i równowagę neuroprzekaźników,<br>poprawiając sprawność mentalną.</p>
+          <div style="display:flex;align-items:stretch;gap:16px;">
+
+            <div style="flex:1;display:flex;flex-direction:column;gap:0;min-width:0;">
+              <div style="background:#d0d0d0;border-radius:12px 12px 0 0;aspect-ratio:1/1;width:100%;"></div>
+              <div style="background:#ffffff;border:1.5px solid #e8e4dc;border-top:none;border-radius:0 0 12px 12px;padding:18px 16px;text-align:left;box-shadow:0 4px 16px rgba(0,0,0,0.07);flex:1;">
+                <div style="font-size:16px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#b8922a;margin-bottom:6px;">Mentalne zmęczenie</div>
+                <p style="font-size:16px;color:var(--gray-600);line-height:1.5;">Z biegiem czasu, w natłoku obowiązków i stresu, nasze baterie szybciej się wyczerpują. Pojawia się znużenie, brak motywacji i trudności ze skupieniem uwagi.</p>
               </div>
             </div>
+
+            <div style="flex-shrink:0;font-size:28px;font-weight:900;color:#1a1a1a;align-self:center;padding:0 4px;">→</div>
+
+            <div style="flex:1;display:flex;flex-direction:column;gap:0;min-width:0;">
+              <div style="border-radius:12px 12px 0 0;aspect-ratio:1/1;width:100%;overflow:hidden;background:#f5f0e6;">
+                <img src="root-STRONA/images/Zero-In.png" alt="Zero-In" style="width:100%;height:100%;object-fit:contain;display:block;padding:12px;box-sizing:border-box;" />
+              </div>
+              <div style="background:#ffffff;border:1.5px solid #e8e4dc;border-top:none;border-radius:0 0 12px 12px;padding:18px 16px;text-align:left;box-shadow:0 4px 16px rgba(0,0,0,0.07);flex:1;">
+                <div style="font-size:16px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#b8922a;margin-bottom:6px;">Moc z natury</div>
+                <p style="font-size:16px;color:var(--gray-600);line-height:1.5;">Starannie dobrane składniki, takie jak N-acetylo-L-tyrozyna i ekstrakt z kory sosny, naturalnie wspierają układ nerwowy i ułatwiają zachowanie jasności umysłu.</p>
+              </div>
+            </div>
+
+            <div style="flex-shrink:0;font-size:28px;font-weight:900;color:#1a1a1a;align-self:center;padding:0 4px;">→</div>
+
+            <div style="flex:1;display:flex;flex-direction:column;gap:0;min-width:0;">
+              <div style="background:#d0d0d0;border-radius:12px 12px 0 0;aspect-ratio:1/1;width:100%;"></div>
+              <div style="background:#ffffff;border:1.5px solid #e8e4dc;border-top:none;border-radius:0 0 12px 12px;padding:18px 16px;text-align:left;box-shadow:0 4px 16px rgba(0,0,0,0.07);flex:1;">
+                <div style="font-size:16px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#b8922a;margin-bottom:6px;">Odzyskanie skupienia</div>
+                <p style="font-size:16px;color:var(--gray-600);line-height:1.5;">Poczuj przypływ naturalnej witalności. Lepsza koncentracja i chęci do działania wracają na długie godziny — bez sztucznego pobudzenia kofeiną i bez popołudniowego "zjazdu".</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- Restore -->
+        <!-- ── RESTORE ── -->
         <div>
-          <div style="font-size:19px;font-weight:600;color:var(--gray-800);margin-bottom:6px;">Restore</div>
-          <p style="font-size:16px;color:var(--gray-600);line-height:1.6;margin-bottom:16px;">Restore uzupełnia zdrowie jelit i wspiera zrównoważone środowisko wewnętrzne organizmu.</p>
-          <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;">
-            <img src="images/Restore.png" alt="Restore" style="width:200px;height:200px;object-fit:contain;border-radius:12px;background:var(--gray-100);" />
-            <div style="background:#f5f0e6;border:1.5px solid #d4c9a8;border-radius:16px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;overflow:hidden;height:200px;">
-              <div style="padding:20px;text-align:center;">
-                <div style="font-size:26px;margin-bottom:8px;">🔥</div>
-                <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Stan zapalny</div>
-                <p style="font-size:12px;color:var(--gray-600);line-height:1.5;">Nieszczelne jelita i zaburzony mikrobiom napędzają przewlekłe zapalenie i bóle stawów</p>
-              </div>
-              <div style="color:var(--navy);font-size:26px;font-weight:900;padding:0 6px;line-height:1;">→</div>
-              <div style="padding:20px;text-align:center;">
-                <div style="font-size:26px;margin-bottom:8px;">🌿</div>
-                <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Restore naprawia</div>
-                <p style="font-size:12px;color:var(--gray-600);line-height:1.5;">Nanoemulsja uszczelnia jelita i przywraca równowagę mikrobiomu od środka</p>
-              </div>
-              <div style="color:var(--navy);font-size:26px;font-weight:900;padding:0 6px;line-height:1;">→</div>
-              <div style="padding:20px;text-align:center;">
-                <div style="font-size:26px;margin-bottom:8px;">💚</div>
-                <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Regeneracja</div>
-                <p style="font-size:12px;color:var(--gray-600);line-height:1.5;">Mniej bólów stawów, lepsza odporność, spokojny sen i wyrównana energia</p>
+          <div style="font-size:28px;font-weight:700;color:var(--gray-800);margin-bottom:6px;text-align:center;">Restore</div>
+          <p style="font-size:16px;color:var(--gray-600);line-height:1.6;margin-bottom:24px;text-align:center;">Restore dba o naturalną równowagę mikrobiomu<br>i wspiera optymalne środowisko wewnętrzne Twojego organizmu.</p>
+          <div style="display:flex;align-items:stretch;gap:16px;">
+
+            <div style="flex:1;display:flex;flex-direction:column;gap:0;min-width:0;">
+              <div style="background:#d0d0d0;border-radius:12px 12px 0 0;aspect-ratio:1/1;width:100%;"></div>
+              <div style="background:#ffffff;border:1.5px solid #e8e4dc;border-top:none;border-radius:0 0 12px 12px;padding:18px 16px;text-align:left;box-shadow:0 4px 16px rgba(0,0,0,0.07);flex:1;">
+                <div style="font-size:16px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#b8922a;margin-bottom:6px;">Zaburzona równowaga</div>
+                <p style="font-size:16px;color:var(--gray-600);line-height:1.5;">Zła dieta, wszechobecny stres i przetworzona żywność obciążają nasz mikrobiom, odbierając nam witalność i naturalną harmonię od środka.</p>
               </div>
             </div>
+
+            <div style="flex-shrink:0;font-size:28px;font-weight:900;color:#1a1a1a;align-self:center;padding:0 4px;">→</div>
+
+            <div style="flex:1;display:flex;flex-direction:column;gap:0;min-width:0;">
+              <div style="border-radius:12px 12px 0 0;aspect-ratio:1/1;width:100%;overflow:hidden;background:#f5f0e6;">
+                <img src="root-STRONA/images/Restore.png" alt="Restore" style="width:100%;height:100%;object-fit:contain;display:block;padding:12px;box-sizing:border-box;" />
+              </div>
+              <div style="background:#ffffff;border:1.5px solid #e8e4dc;border-top:none;border-radius:0 0 12px 12px;padding:18px 16px;text-align:left;box-shadow:0 4px 16px rgba(0,0,0,0.07);flex:1;">
+                <div style="font-size:16px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#b8922a;margin-bottom:6px;">Zaawansowane wsparcie</div>
+                <p style="font-size:16px;color:var(--gray-600);line-height:1.5;">Zaawansowana nanoemulsja aktywnie wspiera florę bakteryjną, ułatwiając organizmowi powrót do naturalnego, zrównoważonego stanu.</p>
+              </div>
+            </div>
+
+            <div style="flex-shrink:0;font-size:28px;font-weight:900;color:#1a1a1a;align-self:center;padding:0 4px;">→</div>
+
+            <div style="flex:1;display:flex;flex-direction:column;gap:0;min-width:0;">
+              <div style="background:#d0d0d0;border-radius:12px 12px 0 0;aspect-ratio:1/1;width:100%;"></div>
+              <div style="background:#ffffff;border:1.5px solid #e8e4dc;border-top:none;border-radius:0 0 12px 12px;padding:18px 16px;text-align:left;box-shadow:0 4px 16px rgba(0,0,0,0.07);flex:1;">
+                <div style="font-size:16px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#b8922a;margin-bottom:6px;">Pełna regeneracja</div>
+                <p style="font-size:16px;color:var(--gray-600);line-height:1.5;">Poczuj codzienny komfort. Produkt wspomaga prawidłowe funkcjonowanie układu odpornościowego, ułatwia nocną regenerację i zapewnia wyrównaną energię na cały dzień.</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -1301,7 +1348,7 @@
   <section style="background:#DDE7E0;padding:clamp(30px,4vh,60px) clamp(20px,5vw,70px);">
     <div style="max-width:900px;margin:0 auto;">
 
-      <div style="font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(0,0,0,.4);text-align:center;margin-bottom:16px;">Prawdziwe efekty</div>
+      <div style="font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(0,0,0,.65);text-align:center;margin-bottom:16px;">Prawdziwe efekty</div>
       <h2 style="font-size:clamp(28px,3.5vw,46px);font-weight:800;color:#1A1A1A;text-align:center;margin-bottom:28px;line-height:1.15;">Prawie się poddała.<br>Potem to się stało.</h2>
 
       <!-- Before/After photos -->
@@ -1310,7 +1357,7 @@
 
           <!-- Left: before -->
           <div style="position:relative;">
-            <img src="images/Generated Image April 20, 2026 - 7_16PM.jpg" alt="Dzień 1" style="aspect-ratio:9/16;max-height:420px;width:100%;object-fit:cover;display:block;" />
+            <img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_16PM.jpg" alt="Dzień 1" style="aspect-ratio:9/16;max-height:420px;width:100%;object-fit:cover;display:block;" />
             <!-- Dzień 1 badge -->
             <div style="position:absolute;bottom:52px;right:12px;background:rgba(0,0,0,.6);color:#fff;font-size:13px;font-weight:700;padding:5px 12px;border-radius:6px;">Dzień 1</div>
             <!-- Przed bar -->
@@ -1319,7 +1366,7 @@
 
           <!-- Right: after -->
           <div style="position:relative;border-left:2px solid #d4c9a8;">
-            <img src="images/Generated Image April 20, 2026 - 7_47PM.jpg" alt="Dzień 47" style="aspect-ratio:9/16;max-height:420px;width:100%;object-fit:cover;display:block;" />
+            <img src="/Users/rafalkieblesz/Desktop/Generated Image April 20, 2026 - 7_47PM.jpg" alt="Dzień 47" style="aspect-ratio:9/16;max-height:420px;width:100%;object-fit:cover;display:block;" />
             <!-- Dzień 47 badge -->
             <div style="position:absolute;bottom:52px;right:12px;background:#2e7d32;color:#fff;font-size:13px;font-weight:700;padding:5px 12px;border-radius:6px;">88 dzień</div>
             <!-- Po bar -->
@@ -1354,52 +1401,52 @@
 
       <div style="font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--navy);text-align:center;margin-bottom:14px;">Dlaczego nic nie działało</div>
       <h2 style="font-size:clamp(30px,4vw,52px);font-weight:800;color:var(--gray-800);text-align:center;line-height:1.15;margin-bottom:16px;">To <span style="color:var(--navy);">nie Twoja</span> wina.<br>Oto co naprawdę się dzieje.</h2>
-      <p style="font-size:16px;color:var(--gray-600);text-align:center;margin-bottom:32px;">Prawdziwy powód, dla którego dieta, wola i tabletki z apteki nie dały rezultatów.</p>
+      <p style="font-size:16px;color:var(--gray-600);text-align:center;margin-bottom:32px;">Prawdziwy powód, dla którego same chęci często nie wystarczą, by odzyskać pełnię sił.</p>
 
       <div style="background:#fdecea;border-left:4px solid #e74c3c;border-radius:0 12px 12px 0;padding:24px 28px;margin-bottom:20px;font-size:15.5px;line-height:1.75;color:var(--gray-800);">
-        Próbowałaś wszystkiego — i nadal budzisz się zmęczona, z mgłą w głowie i bólem, którego nikt nie potrafi wyjaśnić.
-        <strong style="color:#e74c3c;display:block;margin-top:8px;">Lekarz mówi „to wiek" i wypisuje kolejną receptę. Ale żaden lek nie usuwa tego, co przez dekady gromadziło się w Twoich komórkach.</strong>
+        Próbowałaś wszystkiego — i nadal budzisz się zmęczona, rozkojarzona i z poczuciem ociężałości, którego nikt nie potrafi wyjaśnić.
+        <strong style="color:#e74c3c;display:block;margin-top:8px;">Zewsząd słyszysz, że „to po prostu wiek" i musisz się do tego przyzwyczaić. Ale ignorowanie problemu nie usunie obciążeń, z którymi Twój organizm musiał mierzyć się przez dekady.</strong>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;">
 
         <div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:20px 24px;display:flex;align-items:flex-start;gap:18px;">
-          <span style="font-size:40px;flex-shrink:0;">☠️</span>
+          <span style="font-size:40px;flex-shrink:0;">🏭</span>
           <div>
-            <div style="font-weight:700;font-size:19px;color:var(--gray-800);margin-bottom:4px;">Toksyny i metale ciężkie blokują komórki</div>
-            <div style="font-size:14px;color:var(--gray-600);line-height:1.6;">Ołów, rtęć, pestycydy — akumulują się latami w tkankach. Żadna dieta tego nie usunie.</div>
+            <div style="font-weight:700;font-size:19px;color:var(--gray-800);margin-bottom:4px;">Niewidoczne obciążenia środowiskowe</div>
+            <div style="font-size:16px;color:var(--gray-600);line-height:1.6;">Żyjemy w środowisku pełnym smogu, przetworzonej żywności i chemii. Te codzienne czynniki stale wystawiają na próbę nasze naturalne mechanizmy obronne.</div>
           </div>
         </div>
 
         <div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:20px 24px;display:flex;align-items:flex-start;gap:18px;">
-          <span style="font-size:40px;flex-shrink:0;">🧬</span>
+          <span style="font-size:40px;flex-shrink:0;">⚡</span>
           <div>
-            <div style="font-weight:700;font-size:19px;color:var(--gray-800);margin-bottom:4px;">Niedobór dopaminy po menopauzie to norma biologiczna</div>
-            <div style="font-size:14px;color:var(--gray-600);line-height:1.6;">Po 50-tce produkcja dopaminy spada o 30–40%. To wyjaśnia mgłę, brak motywacji i wieczne zmęczenie — nie „lenistwo".</div>
+            <div style="font-weight:700;font-size:19px;color:var(--gray-800);margin-bottom:4px;">Naturalne zmiany i przebodźcowanie</div>
+            <div style="font-size:16px;color:var(--gray-600);line-height:1.6;">Z wiekiem i w obliczu ciągłego stresu nasz układ nerwowy jest mocno obciążony. To dlatego tak często odczuwamy znużenie, trudności ze skupieniem i spadek witalności.</div>
           </div>
         </div>
 
         <div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:20px 24px;display:flex;align-items:flex-start;gap:18px;">
-          <span style="font-size:40px;flex-shrink:0;">🩺</span>
+          <span style="font-size:40px;flex-shrink:0;">🔄</span>
           <div>
-            <div style="font-weight:700;font-size:19px;color:var(--gray-800);margin-bottom:4px;">Konwencjonalna medycyna leczy objawy, nie przyczyny</div>
-            <div style="font-size:14px;color:var(--gray-600);line-height:1.6;">Kolejka do specjalisty, 10-minutowa wizyta, nowa recepta. Żaden z tych leków nie oczyszcza komórek.</div>
+            <div style="font-weight:700;font-size:19px;color:var(--gray-800);margin-bottom:4px;">Zamknięte koło standardowych metod</div>
+            <div style="font-size:16px;color:var(--gray-600);line-height:1.6;">Frustruje Cię, gdy szukasz rozwiązania, a otrzymujesz jedynie standardowe porady i doraźne środki? To błędne koło. Nic się nie zmienia, bo popularne metody często tylko maskują brak energii, ignorując to, że wyczerpany organizm błaga o głębokie wsparcie.</div>
           </div>
         </div>
 
         <div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:20px 24px;display:flex;align-items:flex-start;gap:18px;">
           <span style="font-size:40px;flex-shrink:0;">🔥</span>
           <div>
-            <div style="font-weight:700;font-size:19px;color:var(--gray-800);margin-bottom:4px;">Przewlekły stan zapalny blokuje jelita i stawy</div>
-            <div style="font-size:14px;color:var(--gray-600);line-height:1.6;">Uszkodzony mikrobiom napędza stan zapalny — stąd wzdęcia, bóle stawów i wahania nastroju jednocześnie.</div>
+            <div style="font-weight:700;font-size:19px;color:var(--gray-800);margin-bottom:4px;">Zaburzona równowaga od wewnątrz</div>
+            <div style="font-size:16px;color:var(--gray-600);line-height:1.6;">Stres i nieodpowiednia dieta mogą wpływać na harmonię naszej flory bakteryjnej, co często przekłada się na gorsze samopoczucie i brak codziennego komfortu.</div>
           </div>
         </div>
 
       </div>
 
       <div style="background:#eafaf1;border-left:4px solid #2e7d32;border-radius:0 12px 12px 0;padding:24px 28px;font-size:15.5px;line-height:1.75;color:var(--gray-800);">
-        <strong>Żadna dieta tego nie naprawi. Żadna siła woli tego nie pokona.</strong>
-        <span style="color:#2e7d32;font-weight:600;display:block;margin-top:8px;">Dopóki nie oczyścisz komórek i nie odbudujesz szlaków neuroprzekaźnikowych — nic innego nie zadziała.</span>
+        <strong>Sama siła woli to za mało, gdy ciało domaga się wsparcia.</strong>
+        <span style="color:#2e7d32;font-weight:600;display:block;margin-top:8px;">Prawdziwa zmiana zaczyna się od wewnątrz – wspierając naturalne procesy ochronne, dbając o układ nerwowy i przywracając harmonię mikrobiomu.</span>
       </div>
 
     </div>
@@ -1417,41 +1464,41 @@
         <div style="font-size:20px;font-weight:800;color:var(--gray-800);margin-bottom:16px;">❓ Czy to Twoja historia?</div>
 
         <p style="font-size:15.5px;color:var(--gray-800);line-height:1.75;margin-bottom:28px;">
-          Gdy komórki są zablokowane toksynami, a szlaki dopaminowe wyczerpane — organizm nie może się regenerować, nawet podczas snu. Lata narażenia na środowiskowe zanieczyszczenia, stres i niedobory sumują się w objawy, które medycyna konwencjonalna zbyt często ignoruje.
+          Kiedy po prostu już nie masz siły, a wszystkie czynności sprawiają większą trudność — nawet odpoczynek przestaje przynosić ulgę. Zwykłe przygotowanie obiadu, wyjście po zakupy czy spacer z wnukami wymagają teraz długiego „zbierania sił", a Ty łapiesz się na tym, że po prostu odliczasz godziny do wieczora.
         </p>
 
         <div style="display:flex;flex-direction:column;">
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
-            <span style="font-size:32px;width:40px;text-align:center;flex-shrink:0;">🧠</span>
-            <span style="font-size:16px;font-weight:700;color:var(--gray-800);">Mgła mózgowa — zapominasz słowa, wchodzisz do pokoju i nie wiesz po co</span>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
+            <span style="font-size:44px;width:50px;text-align:center;flex-shrink:0;">🧠</span>
+            <div><div style="font-size:17px;font-weight:700;color:var(--gray-800);margin-bottom:3px;">Permanentne rozkojarzenie</div><div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Uciekają Ci słowa, wchodzisz do pokoju i nagle zapominasz, po co tam przyszłaś.</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
-            <span style="font-size:32px;width:40px;text-align:center;flex-shrink:0;">😴</span>
-            <span style="font-size:16px;font-weight:700;color:var(--gray-800);">Zmęczenie mimo 8 godzin snu — ciało nigdy naprawdę nie odpoczywa</span>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
+            <span style="font-size:44px;width:50px;text-align:center;flex-shrink:0;">😴</span>
+            <div><div style="font-size:17px;font-weight:700;color:var(--gray-800);margin-bottom:3px;">Poranne wyczerpanie</div><div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Śpisz 8 godzin, ale budzisz się z poczuciem, że Twoje baterie nadal są zupełnie puste.</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
-            <span style="font-size:32px;width:40px;text-align:center;flex-shrink:0;">🦴</span>
-            <span style="font-size:16px;font-weight:700;color:var(--gray-800);">Bóle stawów i sztywność, które lekarz kwituje słowem „wiek"</span>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
+            <span style="font-size:44px;width:50px;text-align:center;flex-shrink:0;">🦴</span>
+            <div><div style="font-size:17px;font-weight:700;color:var(--gray-800);margin-bottom:3px;">Uczucie fizycznej ociężałości</div><div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Ciało wydaje się spięte i odmawia dawnego posłuszeństwa, co inni kwitują tylko słowem „wiek".</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
-            <span style="font-size:32px;width:40px;text-align:center;flex-shrink:0;">🫁</span>
-            <span style="font-size:16px;font-weight:700;color:var(--gray-800);">Wzdęcia i ciężkość w brzuchu, których żadna dieta nie likwiduje</span>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
+            <span style="font-size:44px;width:50px;text-align:center;flex-shrink:0;">🫄</span>
+            <div><div style="font-size:17px;font-weight:700;color:var(--gray-800);margin-bottom:3px;">Długotrwały dyskomfort w żołądku</div><div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Ciągłe uczucie ciężkości w brzuchu, którego nie potrafisz zlikwidować samą zmianą jadłospisu.</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
-            <span style="font-size:32px;width:40px;text-align:center;flex-shrink:0;">😤</span>
-            <span style="font-size:16px;font-weight:700;color:var(--gray-800);">Wahania nastroju i drażliwość, których nie rozumiesz sama u siebie</span>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
+            <span style="font-size:44px;width:50px;text-align:center;flex-shrink:0;">😤</span>
+            <div><div style="font-size:17px;font-weight:700;color:var(--gray-800);margin-bottom:3px;">Emocjonalne rozdrażnienie</div><div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Nagła drażliwość i spadki nastroju, które samej trudno Ci u siebie zrozumieć.</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
-            <span style="font-size:32px;width:40px;text-align:center;flex-shrink:0;">🥱</span>
-            <span style="font-size:16px;font-weight:700;color:var(--gray-800);">Budzisz się o 3 w nocy i nie możesz zasnąć — co noc</span>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
+            <span style="font-size:44px;width:50px;text-align:center;flex-shrink:0;">🥱</span>
+            <div><div style="font-size:17px;font-weight:700;color:var(--gray-800);margin-bottom:3px;">Niespokojny sen</div><div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Wybudzasz się o 3 w nocy i do samego rana walczysz, by ponownie zasnąć.</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
-            <span style="font-size:32px;width:40px;text-align:center;flex-shrink:0;">⚡</span>
-            <span style="font-size:16px;font-weight:700;color:var(--gray-800);">Brak motywacji i napędu do działania, mimo że plany masz duże</span>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid #f5c6c2;">
+            <span style="font-size:44px;width:50px;text-align:center;flex-shrink:0;">⚡</span>
+            <div><div style="font-size:17px;font-weight:700;color:var(--gray-800);margin-bottom:3px;">Spadek życiowego napędu</div><div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Masz w głowie mnóstwo planów, ale brakuje Ci tej wewnętrznej iskry, by wcielić je w życie.</div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;">
-            <span style="font-size:32px;width:40px;text-align:center;flex-shrink:0;">🫧</span>
-            <span style="font-size:16px;font-weight:700;color:var(--gray-800);">Czujesz się jak ktoś inny — nie rozpoznajesz siebie sprzed kilku lat</span>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;">
+            <span style="font-size:44px;width:50px;text-align:center;flex-shrink:0;">🫧</span>
+            <div><div style="font-size:17px;font-weight:700;color:var(--gray-800);margin-bottom:3px;">Tęsknota za dawną sobą</div><div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Czujesz się jak ktoś inny i czasem nie rozpoznajesz w sobie tej energii sprzed kilku lat.</div></div>
           </div>
         </div>
 
@@ -1483,53 +1530,46 @@
   <section style="background:#DDE7E0;padding:70px clamp(20px,5vw,70px);">
     <div style="max-width:860px;margin:0 auto;">
 
-      <div style="font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(0,0,0,.4);text-align:center;margin-bottom:14px;">Co zyskujesz</div>
+      <div style="font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(0,0,0,.65);text-align:center;margin-bottom:14px;">Co zyskujesz</div>
       <h2 style="font-size:clamp(28px,3.5vw,46px);font-weight:800;color:#3A3A3A;text-align:center;line-height:1.15;margin-bottom:36px;">7 zmian, które kobiety zauważają jako pierwsze</h2>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:14px;">
 
-        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:24px;">
-          <div style="font-size:40px;margin-bottom:12px;">🧠</div>
-          <div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Jasność myślenia wraca</div>
-          <div style="font-size:13.5px;color:#4a4a4a;line-height:1.6;">Mgła mózgowa odpływa — skupienie i pamięć działają jak dawniej</div>
+        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:12px;display:flex;align-items:center;gap:20px;">
+          <div style="width:200px;min-width:200px;height:160px;background:#d9d9d9;border-radius:8px;flex-shrink:0;"></div>
+          <div><div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Jasność myślenia wraca</div><div style="font-size:13.5px;color:#2a2a2a;line-height:1.6;">Koniec z uciekającymi słowami i rozkojarzeniem. Odzyskujesz dawne skupienie, by w pełni cieszyć się rozmowami i pamiętać o wszystkich codziennych planach.</div></div>
         </div>
 
-        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:24px;">
-          <div style="font-size:40px;margin-bottom:12px;">⚡</div>
-          <div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Energia przez cały dzień</div>
-          <div style="font-size:13.5px;color:#4a4a4a;line-height:1.6;">Naturalna stymulacja dopaminy — bez kawy, bez zjazdu po południu</div>
+        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:12px;display:flex;align-items:center;gap:20px;">
+          <div style="width:200px;min-width:200px;height:160px;background:#d9d9d9;border-radius:8px;flex-shrink:0;"></div>
+          <div><div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Energia przez cały dzień</div><div style="font-size:13.5px;color:#2a2a2a;line-height:1.6;">Chęci do działania wracają od samego rana i utrzymują się do wieczora – bez przymusu picia trzeciej kawy i bez nagłego, popołudniowego spadku sił.</div></div>
         </div>
 
-        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:24px;">
-          <div style="font-size:40px;margin-bottom:12px;">😴</div>
-          <div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Głęboki, nieprzerwany sen</div>
-          <div style="font-size:13.5px;color:#4a4a4a;line-height:1.6;">Koniec z budzeniem się o 3 w nocy — wstajesz wypoczęta</div>
+        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:12px;display:flex;align-items:center;gap:20px;">
+          <div style="width:200px;min-width:200px;height:160px;background:#d9d9d9;border-radius:8px;flex-shrink:0;"></div>
+          <div><div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Spokojniejsze noce, lżejsze poranki</div><div style="font-size:13.5px;color:#2a2a2a;line-height:1.6;">Twój organizm wreszcie się wycisza. Wstajesz z poczuciem, że ciało miało szansę naprawdę głęboko odpocząć i zregenerować wyczerpane rezerwy.</div></div>
         </div>
 
-        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:24px;">
-          <div style="font-size:40px;margin-bottom:12px;">🦴</div>
-          <div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Mniej bólu w stawach</div>
-          <div style="font-size:13.5px;color:#4a4a4a;line-height:1.6;">Restore redukuje stan zapalny — kolana, biodra, plecy przestają boleć</div>
+        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:12px;display:flex;align-items:center;gap:20px;">
+          <div style="width:200px;min-width:200px;height:160px;background:#d9d9d9;border-radius:8px;flex-shrink:0;"></div>
+          <div><div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Swoboda w każdym ruchu</div><div style="font-size:13.5px;color:#2a2a2a;line-height:1.6;">Uczucie ciągłej ociężałości i porannej sztywności ustępuje miejsca komfortowi. Codzienne ruchy i obowiązki znów przychodzą z naturalną swobodą.</div></div>
         </div>
 
-        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:24px;">
-          <div style="font-size:40px;margin-bottom:12px;">🌿</div>
-          <div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Detoks komórkowy</div>
-          <div style="font-size:13.5px;color:#4a4a4a;line-height:1.6;">Clean Slate wymiatuje metale ciężkie i toksyny — fundament całej regeneracji</div>
+        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:12px;display:flex;align-items:center;gap:20px;">
+          <div style="width:200px;min-width:200px;height:160px;background:#d9d9d9;border-radius:8px;flex-shrink:0;"></div>
+          <div><div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Prawdziwe odzyskanie witalności</div><div style="font-size:13.5px;color:#2a2a2a;line-height:1.6;">Zrzucasz z siebie ten niewidzialny „bagaż", który od lat odbierał Ci siły. Ciało odzyskuje harmonię i zaczyna funkcjonować na swoich optymalnych obrotach.</div></div>
         </div>
 
-        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:24px;">
-          <div style="font-size:40px;margin-bottom:12px;">😊</div>
-          <div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Spokój i stabilność nastroju</div>
-          <div style="font-size:13.5px;color:#4a4a4a;line-height:1.6;">Mniej wahań, mniej drażliwości — równowaga emocjonalna bez leków</div>
+        <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:12px;display:flex;align-items:center;gap:20px;">
+          <div style="width:200px;min-width:200px;height:160px;background:#d9d9d9;border-radius:8px;flex-shrink:0;"></div>
+          <div><div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Więcej spokoju i pogody ducha</div><div style="font-size:13.5px;color:#2a2a2a;line-height:1.6;">Odzyskujesz wewnętrzny balans. Drobnostki przestają wyprowadzać Cię z równowagi, rzadziej odczuwasz irytację, a Ty po prostu znów czujesz się w pełni sobą.</div></div>
         </div>
 
       </div>
 
-      <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:24px;margin-bottom:36px;">
-        <div style="font-size:40px;margin-bottom:12px;">🫁</div>
-        <div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Koniec z wzdęciami i ciężkością</div>
-        <div style="font-size:13.5px;color:#4a4a4a;line-height:1.6;">Restore odbudowuje mikrobiom — brzuch przestaje być problemem każdego ranka.</div>
+      <div style="background:#ffffff;border:1.5px solid #2e7d32;border-radius:14px;padding:12px;display:flex;align-items:center;gap:20px;margin-bottom:36px;">
+        <div style="width:200px;min-width:200px;height:160px;background:#d9d9d9;border-radius:8px;flex-shrink:0;"></div>
+        <div><div style="font-weight:700;font-size:16px;color:#1A1A1A;margin-bottom:6px;">Komfort po każdym posiłku</div><div style="font-size:13.5px;color:#2a2a2a;line-height:1.6;">Znika frustrujące uczucie dyskomfortu i ciężkości w brzuchu. Twój mikrobiom dostaje odpowiednie wsparcie, a Ty czujesz się lekko od samego rana.</div></div>
       </div>
 
       <!-- 2 photos -->
@@ -1732,7 +1772,7 @@
   <section style="background:var(--navy);padding:70px clamp(20px,5vw,70px);">
     <div style="max-width:860px;margin:0 auto;">
 
-      <div style="font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.5);text-align:center;margin-bottom:14px;">Różnica</div>
+      <div style="font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.75);text-align:center;margin-bottom:14px;">Różnica</div>
       <h2 style="font-size:clamp(26px,3.5vw,44px);font-weight:800;color:#fff;text-align:center;margin-bottom:36px;">Przed i po protokole ROOT Brands</h2>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;">
@@ -1818,63 +1858,64 @@
   <!-- FAQ -->
   <section style="background:var(--white);padding:70px clamp(20px,5vw,70px);">
     <div style="max-width:760px;margin:0 auto;">
-      <p style="text-align:center;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:12px;">NAJCZĘSTSZE PYTANIA</p>
-      <h2 style="text-align:center;font-size:clamp(26px,4vw,40px);font-weight:800;color:var(--navy);margin-bottom:40px;">Znamy każdą wątpliwość</h2>
+      <p style="text-align:center;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1A1A1A;margin-bottom:12px;">NAJCZĘSTSZE PYTANIA</p>
+      <h2 style="text-align:center;font-size:clamp(26px,4vw,40px);font-weight:800;color:#1A1A1A;margin-bottom:16px;">Znamy <span style="color:var(--navy);">każdą wątpliwość</span></h2>
+      <p style="text-align:center;font-size:16px;color:var(--gray-600);line-height:1.75;margin-bottom:40px;">W pełni to szanujemy. Po 55. czy 65. roku życia nie chcesz już ryzykować i wierzyć w puste obietnice. Chcesz jasności i pewności, że to, co wprowadzasz do swojego organizmu, jest dla Ciebie dobre. Jesteśmy tu, by rozwiać Twoje wątpliwości – tak, jak zrobiłaby to bliska koleżanka, która chce dla Ciebie jak najlepiej.</p>
 
       <div style="display:flex;flex-direction:column;gap:12px;">
 
         <div style="background:#fff;border:1.5px solid #e8e8e8;border-radius:14px;overflow:hidden;">
           <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;gap:14px;padding:22px 24px;background:none;border:none;cursor:pointer;font-family:var(--font);text-align:left;">
-            <span style="font-size:22px;flex-shrink:0;">🤔</span>
-            <span style="flex:1;font-size:16px;font-weight:600;color:var(--navy);">"Próbowałam już wszystkiego i nic nie działało."</span>
-            <span style="font-size:22px;font-weight:400;color:var(--navy);flex-shrink:0;transition:transform .25s;" class="faq-plus">+</span>
+            <span style="font-size:36px;flex-shrink:0;">🤔</span>
+            <span style="flex:1;font-size:18px;font-weight:600;color:#1A1A1A;">"Próbowałam już wszystkiego i nic nie działało."</span>
+            <span style="font-size:32px;font-weight:400;color:#1A1A1A;flex-shrink:0;transition:transform .25s;" class="faq-plus">+</span>
           </button>
           <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .35s ease;">
-            <p style="padding:0 24px 22px 60px;font-size:16px;color:#444;line-height:1.7;">Większość suplementów działa na objawy, nie na przyczynę. ROOT Brands pracuje na poziomie komórkowym — usuwa toksyny zeolitem, odbudowuje szlaki dopaminowe i regeneruje mikrobiom. Tego mechanizmu inne produkty w ogóle nie adresują. Dlatego kobiety, które próbowały wszystkiego, tu w końcu zauważają różnicę.</p>
+            <p style="padding:0 24px 22px 60px;font-size:16px;color:#1A1A1A;line-height:1.7;">W pełni rozumiemy tę frustrację. To nie brak Twojej motywacji, a problem leżący głębiej. Wiele standardowych metod skupia się na doraźnym maskowaniu znużenia, omijając to, że organizm z wiekiem po prostu domaga się głębszej uwagi. Zestaw Trinity to nie kolejny plaster na problem, a kompleksowe wsparcie Twoich naturalnych rezerw u samych podstaw.</p>
           </div>
         </div>
 
         <div style="background:#fff;border:1.5px solid #e8e8e8;border-radius:14px;overflow:hidden;">
           <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;gap:14px;padding:22px 24px;background:none;border:none;cursor:pointer;font-family:var(--font);text-align:left;">
-            <span style="font-size:22px;flex-shrink:0;">⏱️</span>
-            <span style="flex:1;font-size:16px;font-weight:600;color:var(--navy);">"Kiedy zobaczę rezultaty?"</span>
-            <span style="font-size:22px;font-weight:400;color:var(--navy);flex-shrink:0;transition:transform .25s;" class="faq-plus">+</span>
+            <span style="font-size:36px;flex-shrink:0;">⏱️</span>
+            <span style="flex:1;font-size:18px;font-weight:600;color:#1A1A1A;">"Kiedy zobaczę rezultaty?"</span>
+            <span style="font-size:32px;font-weight:400;color:#1A1A1A;flex-shrink:0;transition:transform .25s;" class="faq-plus">+</span>
           </button>
           <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .35s ease;">
-            <p style="padding:0 24px 22px 60px;font-size:16px;color:#444;line-height:1.7;">Większość kobiet zauważa poprawę energii i snu w ciągu 7–14 dni. Wyraźniejsza jasność myślenia i redukcja wzdęć pojawia się zwykle w 2–3 tygodniu. Pełne efekty protokołu widoczne są po 90 dniach — dlatego polecamy pakiet Kompletna Przemiana.</p>
+            <p style="padding:0 24px 22px 60px;font-size:16px;color:#1A1A1A;line-height:1.7;">Każde ciało reaguje we własnym tempie, a bagaż lat też ma znaczenie. Zestaw Trinity został stworzony, aby działać stopniowo, ułatwiając organizmowi powrót do naturalnego, zrównoważonego stanu. Pierwsze subtelne zmiany w samopoczuciu, takie jak powrót lekkości ruchów czy jaśniejszy umysł, wiele kobiet zauważa już w ciągu pierwszych kilku tygodni regularnego stosowania. Prawdziwa witalność wraca powoli, ale trwale.</p>
           </div>
         </div>
 
         <div style="background:#fff;border:1.5px solid #e8e8e8;border-radius:14px;overflow:hidden;">
           <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;gap:14px;padding:22px 24px;background:none;border:none;cursor:pointer;font-family:var(--font);text-align:left;">
-            <span style="font-size:22px;flex-shrink:0;">💊</span>
-            <span style="flex:1;font-size:16px;font-weight:600;color:var(--navy);">"Czy to bezpieczne? Biorę leki na receptę."</span>
-            <span style="font-size:22px;font-weight:400;color:var(--navy);flex-shrink:0;transition:transform .25s;" class="faq-plus">+</span>
+            <span style="font-size:36px;flex-shrink:0;">💊</span>
+            <span style="flex:1;font-size:18px;font-weight:600;color:#1A1A1A;">"Czy to bezpieczne? Biorę leki na receptę."</span>
+            <span style="font-size:32px;font-weight:400;color:#1A1A1A;flex-shrink:0;transition:transform .25s;" class="faq-plus">+</span>
           </button>
           <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .35s ease;">
-            <p style="padding:0 24px 22px 60px;font-size:16px;color:#444;line-height:1.7;">Produkty ROOT Brands są wykonane z naturalnych składników i są dobrze tolerowane. Jak przy każdym suplemencie — jeśli przyjmujesz leki na receptę, skonsultuj się z lekarzem przed rozpoczęciem. Ważne: Clean Slate stosuje się z przerwą 2h od leków, by nie zakłócać ich wchłaniania.</p>
+            <p style="padding:0 24px 22px 60px;font-size:16px;color:#1A1A1A;line-height:1.7;">Twój spokój jest dla nas priorytetem. Produkty z Zestawu Trinity powstają w ściśle kontrolowanych warunkach GMP i posiadają certyfikaty czystości (Non-GMO, Wegańskie, Gluten-Free). Niemniej jednak, z uwagi na Twoje unikalne potrzeby zdrowotne i przyjmowane leki, kategorycznie zalecamy pokazanie składu swojemu lekarzowi prowadzącemu przed rozpoczęciem stosowania. To kluczowy krok, byś czuła się w 100% pewnie.</p>
           </div>
         </div>
 
         <div style="background:#fff;border:1.5px solid #e8e8e8;border-radius:14px;overflow:hidden;">
           <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;gap:14px;padding:22px 24px;background:none;border:none;cursor:pointer;font-family:var(--font);text-align:left;">
-            <span style="font-size:22px;flex-shrink:0;">🛡️</span>
-            <span style="flex:1;font-size:16px;font-weight:600;color:var(--navy);">"A co jeśli mi nie pomoże?"</span>
-            <span style="font-size:22px;font-weight:400;color:var(--navy);flex-shrink:0;transition:transform .25s;" class="faq-plus">+</span>
+            <span style="font-size:36px;flex-shrink:0;">🛡️</span>
+            <span style="flex:1;font-size:18px;font-weight:600;color:#1A1A1A;">"A co jeśli mi nie pomoże?"</span>
+            <span style="font-size:32px;font-weight:400;color:#1A1A1A;flex-shrink:0;transition:transform .25s;" class="faq-plus">+</span>
           </button>
           <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .35s ease;">
-            <p style="padding:0 24px 22px 60px;font-size:16px;color:#444;line-height:1.7;">Masz 90 dni gwarancji zwrotu pieniędzy. Jeśli nie jesteś zadowolona z efektów — napisz do nas w ciągu 90 dni od zakupu i oddamy Ci 100% kwoty. Bez pytań, bez odsyłania produktu. Zero ryzyka z Twojej strony.</p>
+            <p style="padding:0 24px 22px 60px;font-size:16px;color:#1A1A1A;line-height:1.7;">Chcemy, abyś czuła się pewnie ze swoim wyborem. Zgodnie z naszą polityką, oferujemy gwarancję satysfakcji. Jeśli po wypróbowaniu Zestawu Trinity zgodnie z zaleceniami stwierdzisz, że nie widzisz pozytywnych zmian w swoim codziennym komforcie i samopoczuciu, prosimy o kontakt w celu omówienia zwrotu.</p>
           </div>
         </div>
 
         <div style="background:#fff;border:1.5px solid #e8e8e8;border-radius:14px;overflow:hidden;">
           <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;gap:14px;padding:22px 24px;background:none;border:none;cursor:pointer;font-family:var(--font);text-align:left;">
-            <span style="font-size:22px;flex-shrink:0;">💰</span>
-            <span style="flex:1;font-size:16px;font-weight:600;color:var(--navy);">"Dlaczego tak drogo w porównaniu do apteki?"</span>
-            <span style="font-size:22px;font-weight:400;color:var(--navy);flex-shrink:0;transition:transform .25s;" class="faq-plus">+</span>
+            <span style="font-size:36px;flex-shrink:0;">💰</span>
+            <span style="flex:1;font-size:18px;font-weight:600;color:#1A1A1A;">"Dlaczego tak drogo w porównaniu do apteki?"</span>
+            <span style="font-size:32px;font-weight:400;color:#1A1A1A;flex-shrink:0;transition:transform .25s;" class="faq-plus">+</span>
           </button>
           <div class="faq-body" style="max-height:0;overflow:hidden;transition:max-height .35s ease;">
-            <p style="padding:0 24px 22px 60px;font-size:16px;color:#444;line-height:1.7;">Tańsze suplementy używają niskiej jakości ekstraktów w śladowych ilościach — tylko żeby móc wpisać nazwę na etykiecie. ROOT Brands używa farmaceutycznie czystych składników w dawkach klinicznych, testowanych przez niezależne laboratoria. Płacisz za efekt, nie za opakowanie.</p>
+            <p style="padding:0 24px 22px 60px;font-size:16px;color:#1A1A1A;line-height:1.7;">To bardzo zasadne pytanie. W aptece często kupujemy doraźne rozwiązania – osobne tabletki na zmęczenie, inne na pamięć, jeszcze inne na jelita. Zestaw Trinity to nie "suplementacja z doskoku," a zintegrowany system trzech potężnych formuł, które działają u podstaw. To inwestycja w kompleksowe wsparcie organizmu, byś mogła znów w pełni cieszyć się życiem – a to, naszym zdaniem, jest bezcenne.</p>
           </div>
         </div>
 
@@ -1884,24 +1925,25 @@
 
   <!-- TESTIMONIALS -->
   <section style="background:#fff;padding:70px clamp(20px,5vw,70px);">
-    <div style="max-width:1100px;margin:0 auto;">
+    <div style="max-width:760px;margin:0 auto;">
       <!-- Header -->
-      <h2 style="text-align:center;font-size:clamp(26px,4vw,42px);font-weight:800;color:var(--navy);margin-bottom:10px;">
-        Co mówią <span style="color:#3aaa7a;">nasze klientki</span>:
+      <h2 style="text-align:center;font-size:clamp(26px,4vw,42px);font-weight:800;color:#1A1A1A;margin-bottom:16px;">
+        <span style="color:#1A1A1A;">Co </span><span style="color:var(--navy);">mówią kobiety</span><br><span style="color:#1A1A1A;">o Zestawie Trinity</span>
       </h2>
-      <p style="text-align:center;font-size:17px;color:#444;margin-bottom:40px;">
-        Doskonałe <strong>4,9 / 5</strong>
-        <span style="display:inline-flex;gap:3px;vertical-align:middle;margin-left:6px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </span>
-      </p>
+
+      <a href="https://www.trustpilot.com/review/therootbrands.com" target="_blank" rel="noopener" class="stars-row" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;">
+        <div class="stars">
+          <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span class="rating-text">4,6 · 2 236 opinii na Trustpilot</span>
+      </a>
 
       <!-- 3-col grid -->
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div style="display:flex;flex-direction:column;gap:20px;">
 
         <!-- Card 1 -->
         <div style="background:#fff;border:1.5px solid #e8e8e8;border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;gap:14px;">
@@ -1912,11 +1954,10 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <p style="font-size:17px;font-weight:700;color:var(--navy);text-align:center;line-height:1.4;">Wzdęcia znikły. Sypiam całą noc. Oba naraz.</p>
-          <p style="font-size:16px;color:#555;text-align:center;line-height:1.7;">Każdego ranka wstawałam z wzdętym brzuchem i nie wiedziałam dlaczego. Po trzech tygodniach z Clean Slate — znikło. Przestałam też budzić się o 3 w nocy. Nie spodziewałam się, że to może być połączone.</p>
+          <p style="font-size:16px;color:#2a2a2a;text-align:left;line-height:1.7;">Zaczęłam stosować zestaw Trinity ponad rok temu, ale nie podchodziłam do tego zbyt konsekwentnie, aż do miesiąca, w którym nie mogłam sobie na niego pozwolić. Wykupiłam subskrypcję na kilka produktów, w tym Trinity, i efekty są po prostu niesamowite. Trzymajcie się protokołu i instrukcji. Polecam też poprawić jakość swojej diety, co naprawdę świetnie wspomaga cały organizm. Osobiście wybieram produkty o wysokiej gęstości odżywczej. Czuję, że mój organizm jest oczyszczony i mam więcej energii. Nie wiem, jak dziękować tej ekipie za ich ogromną wiedzę, pomoc, cierpliwość i to, że tak wiele mi wyjaśnili.</p>
           <div style="display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid #f0f0f0;">
             <div style="width:36px;height:36px;border-radius:50%;background:#d0d0d0;flex-shrink:0;"></div>
-            <strong style="font-size:14px;color:var(--navy);">Krystyna M., 58 lat</strong>
+            <strong style="font-size:14px;color:var(--navy);">Sylwia J.</strong>
           </div>
         </div>
 
@@ -1929,11 +1970,10 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <p style="font-size:17px;font-weight:700;color:var(--navy);text-align:center;line-height:1.4;">Pierwszy suplement który naprawdę coś zmienił</p>
-          <p style="font-size:16px;color:#555;text-align:center;line-height:1.7;">Próbowałam tylu rzeczy na tę wieczną mgłę i zjazd energetyczny. Zero-In to pierwszy suplement, przy którym w 2. tygodniu naprawdę poczułam różnicę. Zero zjazdu po południu, zero zamglenia rano.</p>
+          <p style="font-size:16px;color:#2a2a2a;text-align:left;line-height:1.7;">Stosuję zestaw Trinity od nieco ponad miesiąca i byłam zaskoczona, że efekty pojawiły się tak szybko. Moje jelita pracują znacznie lepiej, stan zapalny wyraźnie się zmniejszył, a ja mam o wiele więcej energii. Dziękuję za stworzenie tak wysokiej jakości produktów, które naprawdę działają. Nie mogę się doczekać, by zobaczyć rezultaty za kilka kolejnych miesięcy!</p>
           <div style="display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid #f0f0f0;">
             <div style="width:36px;height:36px;border-radius:50%;background:#d0d0d0;flex-shrink:0;"></div>
-            <strong style="font-size:14px;color:var(--navy);">Małgorzata W., 63 lata</strong>
+            <strong style="font-size:14px;color:var(--navy);">Natalia K.</strong>
           </div>
         </div>
 
@@ -1946,11 +1986,10 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#3aaa7a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <p style="font-size:17px;font-weight:700;color:var(--navy);text-align:center;line-height:1.4;">To jakby inna kobieta — w dobrym sensie</p>
-          <p style="font-size:16px;color:#555;text-align:center;line-height:1.7;">Kupiłem żonie po tym jak przez miesiące narzekała na zmęczenie i bóle. Po dwóch tygodniach z Kompletną Przemianą mówi, że jest lżej i śpi całą noc. Poszła na spacer z wnukami — pierwsza taka wycieczka od roku.</p>
+          <p style="font-size:16px;color:#2a2a2a;text-align:left;line-height:1.7;">Nasze zamówienie zostało złożone i zrealizowane terminowo. Zaczęliśmy stosować zestaw Trinity, czyli Restore, Zero-In oraz Clean Slate. W ciągu tygodnia oboje zauważyliśmy wyraźną zmianę w naszym nastroju i poziomie energii. Już to samo w sobie jest niezwykle budujące. Ja dodatkowo zauważyłam stabilizację i powrót ciśnienia do poziomu, który przestał być niepokojący. Na pewno będziemy kontynuować tę zdrowotną podróż.</p>
           <div style="display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid #f0f0f0;">
             <div style="width:36px;height:36px;border-radius:50%;background:#d0d0d0;flex-shrink:0;"></div>
-            <strong style="font-size:14px;color:var(--navy);">Marek P. (dla żony)</strong>
+            <strong style="font-size:14px;color:var(--navy);">Elżbieta K.</strong>
           </div>
         </div>
 
@@ -1962,40 +2001,49 @@
   <section style="background:#fff;padding:70px clamp(20px,5vw,70px);">
     <div style="max-width:760px;margin:0 auto;">
       <p style="text-align:center;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:12px;">SPOJRZENIE NA LICZBY</p>
-      <h2 style="text-align:center;font-size:clamp(26px,4vw,42px);font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:12px;">Ile naprawdę wydajesz każdego dnia?</h2>
-      <p style="text-align:center;font-size:16px;color:#777;margin-bottom:32px;">Porównaj realny koszt dzienny</p>
+      <h2 style="text-align:center;font-size:clamp(26px,4vw,42px);font-weight:800;color:#1A1A1A;line-height:1.2;margin-bottom:12px;">Czy <span style="color:var(--navy);">26 zł</span> dziennie to dużo za powrót sił?</h2>
+      <p style="text-align:center;font-size:16px;color:#3a3a3a;margin-bottom:32px;">775 zł za Zestaw Trinity to konkretna inwestycja. Ale gdy rozbijesz ją na pojedyncze dni, zobaczysz, że to kwota, która często rozchodzi się na drobnostki ratujące nasze samopoczucie.</p>
 
-      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px;">
 
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border:1.5px solid #e8e8e8;border-radius:12px;background:#fff;">
-          <span style="font-size:16px;color:#333;">☕ Codziennia kawa w kawiarni</span>
-          <span style="font-size:16px;font-weight:700;color:var(--navy);">~15 zł/dzień</span>
+        <div style="border:1.5px solid #e8e8e8;border-radius:12px;padding:20px 24px;background:#fff;display:flex;align-items:center;gap:20px;">
+          <div style="flex:1;">
+            <div style="font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:6px;">🍰 Codzienne drobnostki "na poprawę humoru"</div>
+            <div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Kawałek ciasta z piekarni, ulubiona gazeta, coś słodkiego do popołudniowej kawy. Drobne zakupy, którymi często pocieszamy się, gdy brakuje nam energii do działania.</div>
+          </div>
+          <div style="font-size:15px;font-weight:700;color:var(--navy);white-space:nowrap;flex-shrink:0;">~ 8–12 zł / dzień</div>
         </div>
 
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border:1.5px solid #e8e8e8;border-radius:12px;background:#fff;">
-          <span style="font-size:16px;color:#333;">🩺 Prywatna wizyta u specjalisty</span>
-          <span style="font-size:16px;font-weight:700;color:var(--navy);">~25 zł/dzień</span>
+        <div style="border:1.5px solid #e8e8e8;border-radius:12px;padding:20px 24px;background:#fff;display:flex;align-items:center;gap:20px;">
+          <div style="flex:1;">
+            <div style="font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:6px;">💊 Podstawowa apteczka "na przetrwanie"</div>
+            <div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Magnez z reklamy, herbatka na sen, zwykłe tabletki i maści. Zostawiasz w aptece kilkadziesiąt złotych co kilka dni, próbując doraźnie ratować swoje samopoczucie.</div>
+          </div>
+          <div style="font-size:15px;font-weight:700;color:var(--navy);white-space:nowrap;flex-shrink:0;">~ 5–8 zł / dzień</div>
         </div>
 
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border:1.5px solid #e8e8e8;border-radius:12px;background:#fff;">
-          <span style="font-size:16px;color:#333;">💊 Suplementy bez efektu z apteki</span>
-          <span style="font-size:16px;font-weight:700;color:var(--navy);">~10 zł/dzień</span>
+        <div style="border:1.5px solid #2e7d32;border-radius:12px;padding:20px 24px;background:#f1f8f1;display:flex;align-items:center;gap:20px;">
+          <div style="flex:1;">
+            <div style="font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:6px;">🌿 ROOT Zestaw Trinity — Kompleksowe wsparcie</div>
+            <div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Za równowartość obiadu w barze mlecznym otrzymujesz 3 zaawansowane formuły, które celują w podstawy znużenia i obciążeń organizmu, a nie tylko w ich maskowanie.</div>
+          </div>
+          <div style="font-size:15px;font-weight:700;color:#2e7d32;white-space:nowrap;flex-shrink:0;">~ 26 zł / dzień ✓</div>
         </div>
 
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-radius:12px;background:var(--navy);">
-          <span style="font-size:16px;font-weight:700;color:#fff;">🌿 ROOT Brands Pełna Regeneracja</span>
-          <span style="font-size:16px;font-weight:700;color:#fff;">~6 zł/dzień ✓</span>
+        <div style="border:1.5px solid #e8e8e8;border-radius:12px;padding:20px 24px;background:#fff;display:flex;align-items:center;gap:20px;">
+          <div style="flex:1;">
+            <div style="font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:6px;">⏳ Odkładanie własnego życia na "kiedyś"</div>
+            <div style="font-size:15px;color:#2a2a2a;line-height:1.6;">Dni, które po prostu "przeczekujesz" przed telewizorem z braku sił. Omijane spacery, rezygnacja ze spotkań. Poczucia uciekającego czasu nie da się wycenić.</div>
+          </div>
+          <div style="font-size:15px;font-weight:700;color:#c0392b;white-space:nowrap;flex-shrink:0;">Koszt: Najwyższy</div>
         </div>
 
       </div>
 
-      <p style="text-align:center;font-size:16px;color:#555;margin-bottom:6px;">Mniej niż kawa. Działa u źródła problemu.</p>
-      <p style="text-align:center;font-size:16px;font-weight:700;color:var(--navy);margin-bottom:28px;">Co naprawdę zmienia Twój organizm?</p>
-
       <a href="#buy" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:20px 32px;background:var(--navy);color:#fff;border-radius:12px;font-size:17px;font-weight:700;text-decoration:none;text-align:center;">
         🚚 Zamów teraz — bezpłatna wysyłka
       </a>
-      <p style="text-align:center;font-size:13px;color:#888;margin-top:12px;">🛡️ Gwarancja 90 dni zwrotu pieniędzy · Zero ryzyka</p>
+      <p style="text-align:center;font-size:13px;color:#555;margin-top:12px;">🛡️ Gwarancja 90 dni zwrotu pieniędzy · Zero ryzyka</p>
     </div>
   </section>
 
@@ -2003,33 +2051,33 @@
   <section style="background:#fff;padding:70px clamp(20px,5vw,70px);">
     <div style="max-width:760px;margin:0 auto;">
       <p style="text-align:center;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:12px;">INNA ŚCIEŻKA</p>
-      <h2 style="text-align:center;font-size:clamp(26px,4vw,42px);font-weight:800;color:var(--navy);margin-bottom:28px;">Co się dzieje, jeśli nic nie zrobisz?</h2>
+      <h2 style="text-align:center;font-size:clamp(26px,4vw,42px);font-weight:800;color:#1A1A1A;margin-bottom:28px;">Co się dzieje, jeśli nic nie zrobisz?</h2>
 
-      <div style="background:var(--navy);border-radius:14px 14px 0 0;padding:28px 32px;text-align:center;">
-        <p style="font-size:17px;font-weight:800;color:#fff;line-height:1.5;margin-bottom:10px;">Toksyny i niedobór dopaminy nie znikną same. Każdy dzień bez działania to kolejna warstwa problemu.</p>
-        <p style="font-size:16px;color:rgba(255,255,255,.75);line-height:1.6;">Oto jak wygląda organizm kobiety, która czeka:</p>
+      <div style="background:#e74c3c;border-radius:14px 14px 0 0;padding:28px 32px;text-align:center;">
+        <p style="font-size:17px;font-weight:800;color:#fff;line-height:1.5;margin-bottom:10px;">Uciążliwe zmęczenie i poczucie ociężałości nie znikną same. Ignorowanie sygnałów, które wysyła wyczerpane ciało, to równia pochyła.</p>
+        <p style="font-size:16px;color:rgba(255,255,255,.85);line-height:1.6;">Oto jak często wygląda rzeczywistość kobiety, która wszystko zrzuca na „podeszły wiek":</p>
       </div>
 
       <div style="border:1.5px solid #e8e8e8;border-top:none;border-radius:0 0 14px 14px;overflow:hidden;">
 
         <div style="display:flex;align-items:flex-start;gap:16px;padding:22px 24px;border-bottom:1px solid #f0f0f0;">
           <span style="font-size:24px;flex-shrink:0;margin-top:2px;">📅</span>
-          <p style="font-size:16px;color:#333;line-height:1.7;"><strong style="color:#c0392b;">Miesiąc 1:</strong> Mgła mózgowa staje się codziennością. Wzdęcia każdego ranka. Budzenie o 3 w nocy bez powodu.</p>
+          <p style="font-size:16px;color:#333;line-height:1.7;"><strong style="color:#1A1A1A;">Miesiąc 1: Przyzwyczajenie do dyskomfortu</strong><br>Uczucie porannego rozbicia staje się normą. Rozkojarzenie i fizyczna ciężkość towarzyszą Ci od samego rana, a niespokojne noce sprawiają, że nigdy nie czujesz się w pełni zregenerowana.</p>
         </div>
 
         <div style="display:flex;align-items:flex-start;gap:16px;padding:22px 24px;border-bottom:1px solid #f0f0f0;">
           <span style="font-size:24px;flex-shrink:0;margin-top:2px;">📅</span>
-          <p style="font-size:16px;color:#333;line-height:1.7;"><strong style="color:#c0392b;">Miesiąc 3:</strong> Bóle stawów się nasilają. Skupienie na pracy staje się niemożliwe. Przestajesz planować, bo zawsze jesteś zbyt zmęczona.</p>
+          <p style="font-size:16px;color:#333;line-height:1.7;"><strong style="color:#1A1A1A;">Miesiąc 3: Rezygnacja z planów</strong><br>Fizyczny opór ciała staje się zbyt duży. Zwykłe wyjście na spacer, opieka nad wnukami czy spotkanie z koleżanką wymagają długiego „zbierania sił". Coraz częściej odwołujesz plany, wybierając kanapę, bo po prostu nie masz napędu do działania.</p>
         </div>
 
         <div style="display:flex;align-items:flex-start;gap:16px;padding:22px 24px;border-bottom:1px solid #f0f0f0;">
           <span style="font-size:24px;flex-shrink:0;margin-top:2px;">📅</span>
-          <p style="font-size:16px;color:#333;line-height:1.7;"><strong style="color:#c0392b;">Miesiąc 6:</strong> Nie rozpoznajesz siebie sprzed roku. Relacje cierpią. Poczucie że "tak już musi być" zaczyna wyglądać jak prawda.</p>
+          <p style="font-size:16px;color:#333;line-height:1.7;"><strong style="color:#1A1A1A;">Miesiąc 6: Smutna akceptacja</strong><br>Zaczynasz wierzyć otoczeniu, że „w tym wieku tak już musi być". Frustracja przeplata się ze zrezygnowaniem. Z trudem przypominasz sobie tę pełną energii, uśmiechniętą kobietę, którą byłaś jeszcze kilka lat temu.</p>
         </div>
 
         <div style="display:flex;align-items:flex-start;gap:16px;padding:22px 24px;">
           <span style="font-size:24px;flex-shrink:0;margin-top:2px;">⚠️</span>
-          <p style="font-size:16px;color:#333;line-height:1.7;"><strong style="color:#c0392b;">Długoterminowo:</strong> Akumulacja toksyn i przewlekły stan zapalny są powiązane z przyspieszoną degeneracją kognitywną i osteoporozą. Bez interwencji nie odwrócą się same.</p>
+          <p style="font-size:16px;color:#333;line-height:1.7;"><strong style="color:#1A1A1A;">Długoterminowo: Utrata najpiękniejszych lat</strong><br>Zamiast cieszyć się wolnym czasem, zasłużonym spokojem i realizować pasje, spędzasz dni na "przeczekiwaniu" zmęczenia. Tracisz bezcenne chwile i omija Cię to, co w życiu najlepsze, wmawiając sobie, że na odzyskanie witalności jest już za późno.</p>
         </div>
 
       </div>
@@ -2054,7 +2102,7 @@
           </div>
           <div>
             <p style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:4px;">dr Anna Kowalska</p>
-            <p style="font-size:14px;color:#666;margin-bottom:12px;">Medycyna funkcjonalna i zdrowie kobiet 50+</p>
+            <p style="font-size:14px;color:#2a2a2a;margin-bottom:12px;">Medycyna funkcjonalna i zdrowie kobiet 50+</p>
             <span style="display:inline-block;padding:5px 14px;border:1.5px solid #b5a07a;border-radius:20px;font-size:13px;font-weight:600;color:#7a6540;">Ocena kliniczna</span>
           </div>
         </div>
@@ -2065,7 +2113,7 @@
           </div>
           <div>
             <p style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:4px;">dr Marek Wiśniewski, ND</p>
-            <p style="font-size:14px;color:#666;margin-bottom:12px;">Menopauza i zdrowie hormonalne kobiet</p>
+            <p style="font-size:14px;color:#2a2a2a;margin-bottom:12px;">Menopauza i zdrowie hormonalne kobiet</p>
             <span style="display:inline-block;padding:5px 14px;border:1.5px solid #b5a07a;border-radius:20px;font-size:13px;font-weight:600;color:#7a6540;">Omówienie w podkaście</span>
           </div>
         </div>
@@ -2076,7 +2124,7 @@
           </div>
           <div>
             <p style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:4px;">Zosia — influencerka wellbeing 60+</p>
-            <p style="font-size:14px;color:#666;margin-bottom:12px;">Twórczyni treści o zdrowiu kobiet po pięćdziesiątce</p>
+            <p style="font-size:14px;color:#2a2a2a;margin-bottom:12px;">Twórczyni treści o zdrowiu kobiet po pięćdziesiątce</p>
             <span style="display:inline-block;padding:5px 14px;border:1.5px solid #b5a07a;border-radius:20px;font-size:13px;font-weight:600;color:#7a6540;">Polecenie osobiste</span>
           </div>
         </div>
@@ -2086,7 +2134,7 @@
   </section>
 
   <!-- SECTION: SELF-CHECK -->
-  <section style="background:var(--navy);padding:70px clamp(20px,5vw,70px);">
+  <section style="display:none;background:var(--navy);padding:70px clamp(20px,5vw,70px);">
     <div style="max-width:760px;margin:0 auto;">
       <p style="text-align:center;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:14px;">SPRAWDŹ SIEBIE</p>
       <h2 style="text-align:center;font-size:clamp(26px,4vw,42px);font-weight:800;color:#fff;margin-bottom:10px;">Czy to brzmi znajomo?</h2>
@@ -2143,8 +2191,8 @@
     <div style="max-width:1100px;margin:0 auto;">
 
       <!-- Guarantee header -->
-      <h2 style="font-size:clamp(26px,4vw,44px);font-weight:800;color:var(--navy);text-align:center;margin-bottom:16px;">Zamów dziś z gwarancją zwrotu pieniędzy przez 90 dni</h2>
-      <p style="text-align:center;font-size:16px;color:#555;margin-bottom:32px;">Jesteśmy przekonani o jakości ROOT Brands — dlatego oferujemy <strong>gwarancję 90 dni bez ryzyka.</strong></p>
+      <h2 style="font-size:clamp(26px,4vw,44px);font-weight:800;color:var(--navy);text-align:center;margin-bottom:16px;line-height:1.2;">Zadbaj o siebie z Zestawem Trinity<br>i <span style="color:#b8922a;">ciesz się każdym dniem</span> w pełni.</h2>
+      <p style="text-align:center;font-size:16px;color:#2a2a2a;margin-bottom:32px;">Jesteśmy przekonani o jakości ROOT Brands — dlatego oferujemy <strong>gwarancję 90 dni bez ryzyka.</strong></p>
       <div style="display:flex;justify-content:center;margin-bottom:60px;">
         <a href="#buy" style="display:inline-block;padding:18px 48px;background:var(--navy);color:#fff;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;">Zamów teraz</a>
       </div>
@@ -2161,7 +2209,7 @@
           </div>
           <span style="font-size:16px;font-weight:600;color:var(--navy);">312 Opinii</span>
         </div>
-        <div style="width:36px;height:36px;border:1.5px solid #e0e0e0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#666;font-size:18px;">⊟</div>
+        <div style="width:36px;height:36px;border:1.5px solid #e0e0e0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#2a2a2a;font-size:18px;">⊟</div>
       </div>
 
       <!-- 4-col review grid -->
@@ -2287,7 +2335,7 @@
 
       <!-- Show more -->
       <div style="text-align:center;margin-top:32px;">
-        <button onclick="this.closest('section').querySelector('#moreReviews').style.display='block';this.style.display='none';" style="padding:12px 32px;border:1.5px solid #ccc;border-radius:8px;background:#fff;font-size:14px;font-weight:600;color:#555;cursor:pointer;">Pokaż więcej opinii</button>
+        <button onclick="this.closest('section').querySelector('#moreReviews').style.display='block';this.style.display='none';" style="padding:12px 32px;border:1.5px solid #ccc;border-radius:8px;background:#fff;font-size:14px;font-weight:600;color:#2a2a2a;cursor:pointer;">Pokaż więcej opinii</button>
       </div>
       <div id="moreReviews" style="display:none;"></div>
 
