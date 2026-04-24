@@ -1031,22 +1031,46 @@
       .hero {
         padding: 20px 16px !important;
         gap: 24px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
       }
-      .buy-box h1 { font-size: 28px !important; }
-      .qty-name { font-size: 15px !important; }
-      .qty-sub { font-size: 11px !important; }
-      .qty-price-now { font-size: 14px !important; }
-      .qty-price-was { font-size: 11px !important; }
+      .buy-box {
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+      }
+      .buy-box h1 { font-size: 26px !important; }
+      .qty-name { font-size: 14px !important; }
+      .qty-sub { font-size: 10.5px !important; }
+      .qty-price-now { font-size: 13px !important; }
+      .qty-price-was { font-size: 10px !important; }
       .qty-badge {
         font-size: 9px !important;
-        padding: 2px 6px !important;
+        padding: 2px 5px !important;
         letter-spacing: 0 !important;
+        white-space: nowrap !important;
+        max-width: 120px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
       }
       .low-stock-badge {
+        display: flex !important;
         white-space: normal !important;
-        font-size: 13px !important;
+        font-size: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
       }
-      .bullets li { font-size: 15px !important; }
+      .bullets { padding-left: 0 !important; }
+      .bullets li {
+        font-size: 14px !important;
+        word-break: break-word !important;
+      }
+      div[id^="qty-img-"] {
+        width: 70px !important;
+        height: 70px !important;
+        min-width: 70px !important;
+      }
 
       /* 1. Galeria — NIE sticky na mobile */
       #galleryCol { position: static !important; top: auto !important; }
